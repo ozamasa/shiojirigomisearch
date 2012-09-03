@@ -1,0 +1,29 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  ruby: MyString
+  image_url: MyString
+  category: 
+  note: MyText
+  gabage_station: MyString
+  gabage_station: MyString
+  keyword1: MyString
+  keyword2: MyString
+  keyword3: MyString
+  keyword4: MyString
+  keyword5: MyString
+
+two:
+  name: MyString
+  ruby: MyString
+  image_url: MyString
+  category: 
+  note: MyText
+  gabage_station: MyString
+  gabage_station: MyString
+  keyword1: MyString
+  keyword2: MyString
+  keyword3: MyString
+  keyword4: MyString
+  keyword5: MyString

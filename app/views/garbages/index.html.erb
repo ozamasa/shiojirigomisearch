@@ -1,0 +1,83 @@
+<%= menu %>
+
+<div id="contents">
+<%= submenu %>
+
+<div id="main">
+
+<%= message %>
+
+<%= pagetitle :title => htitle(:garbage) %>
+
+<%= flash_tag %>
+
+<div class="commonBtnArea">
+<div class="leftBox">
+<%= search_tag %>
+</div>
+<div class="rightBox">
+<%= csv_button_tag %>
+<%= new_button_tag %>
+</div>
+<!--/ commonBtnArea--></div>
+
+<div class="list">
+<%= paginate_tag @garbages %>
+<%= counter_tag %>
+<table class="commonList">
+<thead>
+  <tr>
+    <th><%=hlabel :garbage, :id %><%= sort_tag('id') %></th>
+    <th><%=hlabel :garbage, :name %><%= sort_tag('name')%></th>
+    <th><%=hlabel :garbage, :ruby %><%= sort_tag('ruby')%></th>
+    <th><%=hlabel :garbage, :image_url %><%= sort_tag('image_url')%></th>
+    <th><%=hlabel :garbage, :category_id %><%= sort_tag('category')%></th>
+    <th><%=hlabel :garbage, :note %><%= sort_tag('note')%></th>
+    <th><%=hlabel :garbage, :gabage_station %><%= sort_tag('gabage_station')%></th>
+    <th><%=hlabel :garbage, :gabage_station %><%= sort_tag('gabage_station')%></th>
+    <th><%=hlabel :garbage, :keyword1 %><%= sort_tag('keyword1')%></th>
+    <th><%=hlabel :garbage, :keyword2 %><%= sort_tag('keyword2')%></th>
+    <th><%=hlabel :garbage, :keyword3 %><%= sort_tag('keyword3')%></th>
+    <th><%=hlabel :garbage, :keyword4 %><%= sort_tag('keyword4')%></th>
+    <th><%=hlabel :garbage, :keyword5 %><%= sort_tag('keyword5')%></th>
+  </tr>
+</thead>
+<tbody>
+<% @garbages.each do |garbage| %>
+  <tr>
+    <td><%=link_to garbage.id, garbage %></td>
+    <td><%=h garbage.name %></td>
+    <td><%=h garbage.ruby %></td>
+    <td><%=h garbage.image_url %></td>
+    <td><%=hname garbage.category %></td>
+    <td><%=h garbage.note %></td>
+    <td><%=h garbage.gabage_station %></td>
+    <td><%=h garbage.gabage_station %></td>
+    <td><%=h garbage.keyword1 %></td>
+    <td><%=h garbage.keyword2 %></td>
+    <td><%=h garbage.keyword3 %></td>
+    <td><%=h garbage.keyword4 %></td>
+    <td><%=h garbage.keyword5 %></td>
+  </tr>
+<% end %>
+</tbody>
+</table>
+<!--/ list--></div>
+
+<div class="commonBtnArea">
+<div class="leftBox">
+<% form_tag({ :action => :upload }, { :multipart => true, :method => :post }) do  %>
+<h3><%= hlabel :commons, :upload_file %></h3>
+<%= note "インポートするファイルは「CSV出力」で出力したファイルを編集してください。" %><br>
+<%= note "データを新規登録する場合は「ID」列を空白にしてください。" %><br>
+
+<%= file_field_tag :file %>
+<%= submit_tag "インポート", :confirm => "インポートしますか？" %>
+<% end %>
+</div>
+<div class="centerBox">
+</div>
+<!--/ commonBtnArea--></div>
+
+<!--/ #main--></div>
+<!--/ #contents--></div>

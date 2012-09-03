@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  cycle: MyString
+  detail: MyText
+  detail_url: MyString
+  throw: MyText
+  throw_url: MyString
+
+two:
+  name: MyString
+  cycle: MyString
+  detail: MyText
+  detail_url: MyString
+  throw: MyText
+  throw_url: MyString

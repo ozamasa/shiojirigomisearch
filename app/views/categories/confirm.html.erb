@@ -1,0 +1,84 @@
+<% form_for(@category) do |f| %>
+
+<%= menu %>
+<div id="contents">
+<%= submenu %>
+
+<div id="main">
+
+<%= message %>
+
+<%= pagetitle :title => htitle(:category) %>
+
+<div class="sheet">
+
+<%= flash_tag %>
+
+<% content_for :button do %>
+<div class="commonBtnArea">
+<div class="centerBox">
+<%= submit_button_tag(f) %>
+<%= back_button_tag %>
+<%= index_button_tag %>
+</div>
+<!--/ commonBtnArea--></div>
+<% end %>
+
+<%#= yield :button %>
+
+<%= pagesubtitle %>
+
+<table class="commonSheet">
+<tr>
+<th><%= f.label :name %></th>
+<td>
+  <%= h @category.name %>
+  <%= f.hidden_field :name %>
+</td>
+</tr>
+<tr>
+<th><%= f.label :cycle %></th>
+<td>
+  <%= h @category.cycle %>
+  <%= f.hidden_field :cycle %>
+</td>
+</tr>
+<tr>
+<th><%= f.label :detail %></th>
+<td>
+  <%= hbr @category.detail %>
+  <%= f.hidden_field :detail %>
+</td>
+</tr>
+<tr>
+<th><%= f.label :detail_url %></th>
+<td>
+  <%= h @category.detail_url %>
+  <%= f.hidden_field :detail_url %>
+</td>
+</tr>
+<tr>
+<th><%= f.label :throw %></th>
+<td>
+  <%= hbr @category.throw %>
+  <%= f.hidden_field :throw %>
+</td>
+</tr>
+<tr>
+<th><%= f.label :throw_url %></th>
+<td>
+  <%= h @category.throw_url %>
+  <%= f.hidden_field :throw_url %>
+</td>
+</tr>
+<%= f.hidden_field :lock_version %>
+</table>
+
+</div>
+
+<%= yield :button %>
+
+<!--/ #main--></div>
+<!--/ #contents--></div>
+
+<% end %>

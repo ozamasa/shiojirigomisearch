@@ -1,0 +1,10 @@
+source 'http://rubygems.org'
+source 'http://gems.github.com'
+
+gem 'rake', '0.8.7'
+gem 'rails', '2.3.4'
+gem 'rack', '1.0.1'
+gem 'i18n', '0.4.2'
+gem 'pg'
+gem 'mislav-will_paginate'
+gem 'amatsuda-i18n_generators'

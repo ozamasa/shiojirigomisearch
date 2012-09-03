@@ -1,0 +1,126 @@
+<% form_for(@garbage) do |f| %>
+
+<%= menu %>
+<div id="contents">
+<%= submenu %>
+
+<div id="main">
+
+<%= message %>
+
+<%= pagetitle :title => htitle(:garbage) %>
+
+<div class="sheet">
+
+<%= flash_tag %>
+
+<% content_for :button do %>
+<div class="commonBtnArea">
+<div class="centerBox">
+<%= submit_button_tag(f) %>
+<%= back_button_tag %>
+<%= index_button_tag %>
+</div>
+<!--/ commonBtnArea--></div>
+<% end %>
+
+<%#= yield :button %>
+
+<%= pagesubtitle %>
+
+<table class="commonSheet">
+<tr>
+<th><%= f.label :name %></th>
+<td>
+  <%= h @garbage.name %>
+  <%= f.hidden_field :name %>
+</td>
+</tr>
+<tr>
+<th><%= f.label :ruby %></th>
+<td>
+  <%= h @garbage.ruby %>
+  <%= f.hidden_field :ruby %>
+</td>
+</tr>
+<tr>
+<th><%= f.label :image_url %></th>
+<td>
+  <%= h @garbage.image_url %>
+  <%= f.hidden_field :image_url %>
+</td>
+</tr>
+<tr>
+<th><%= f.label :category %></th>
+<td>
+  <%= hname @garbage.category %>
+  <%= f.hidden_field :category_id %>
+</td>
+</tr>
+<tr>
+<th><%= f.label :note %></th>
+<td>
+  <%= hbr @garbage.note %>
+  <%= f.hidden_field :note %>
+</td>
+</tr>
+<tr>
+<th><%= f.label :gabage_station %></th>
+<td>
+  <%= h @garbage.gabage_station %>
+  <%= f.hidden_field :gabage_station %>
+</td>
+</tr>
+<tr>
+<th><%= f.label :gabage_station %></th>
+<td>
+  <%= h @garbage.gabage_station %>
+  <%= f.hidden_field :gabage_station %>
+</td>
+</tr>
+<tr>
+<th><%= f.label :keyword1 %></th>
+<td>
+  <%= h @garbage.keyword1 %>
+  <%= f.hidden_field :keyword1 %>
+</td>
+</tr>
+<tr>
+<th><%= f.label :keyword2 %></th>
+<td>
+  <%= h @garbage.keyword2 %>
+  <%= f.hidden_field :keyword2 %>
+</td>
+</tr>
+<tr>
+<th><%= f.label :keyword3 %></th>
+<td>
+  <%= h @garbage.keyword3 %>
+  <%= f.hidden_field :keyword3 %>
+</td>
+</tr>
+<tr>
+<th><%= f.label :keyword4 %></th>
+<td>
+  <%= h @garbage.keyword4 %>
+  <%= f.hidden_field :keyword4 %>
+</td>
+</tr>
+<tr>
+<th><%= f.label :keyword5 %></th>
+<td>
+  <%= h @garbage.keyword5 %>
+  <%= f.hidden_field :keyword5 %>
+</td>
+</tr>
+<%= f.hidden_field :lock_version %>
+</table>
+
+</div>
+
+<%= yield :button %>
+
+<!--/ #main--></div>
+<!--/ #contents--></div>
+
+<% end %>

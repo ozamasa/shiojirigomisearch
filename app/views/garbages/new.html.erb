@@ -1,0 +1,114 @@
+<% form_for(@garbage, :url => { :action => :check }, :html => { :method => :post }) do |f| %>
+
+<%= menu %>
+<div id="contents">
+<%= submenu %>
+
+<div id="main">
+
+<%= message %>
+
+<%= pagetitle :title => htitle(:garbage) %>
+
+<div class="sheet">
+
+<%= f.error_messages %>
+<%= flash_tag %>
+
+<% content_for :button do %>
+<div class="commonBtnArea">
+<div class="centerBox">
+<%= submit_button_tag(f) %>
+<%= index_button_tag %>
+</div>
+<!--/ commonBtnArea--></div>
+<% end %>
+
+<%#= yield :button %>
+
+<%= pagesubtitle %>
+<%= required_notice_tag %>
+
+<table class="commonSheet">
+<tr>
+<th><%= f.label :name %></th>
+<td>
+  <%= f.text_field :name %>
+</td>
+</tr>
+<tr>
+<th><%= f.label :ruby %></th>
+<td>
+  <%= f.text_field :ruby %>
+</td>
+</tr>
+<tr>
+<th><%= f.label :image_url %></th>
+<td>
+  <%= f.text_field :image_url %>
+</td>
+</tr>
+<tr>
+<th><%= f.label :category %></th>
+<td>
+  <%= f.collection_select(:category_id, Category.find(:all), :id, :name, :include_blank => true) %>
+</td>
+</tr>
+<tr>
+<th><%= f.label :note %></th>
+<td>
+  <%= f.text_area :note, :size => "60x5" %>
+</td>
+</tr>
+<tr>
+<th><%= f.label :gabage_station %></th>
+<td>
+  <%= f.text_field :gabage_station %>
+</td>
+</tr>
+<tr>
+<th><%= f.label :gabage_station %></th>
+<td>
+  <%= f.text_field :gabage_station %>
+</td>
+</tr>
+<tr>
+<th><%= f.label :keyword1 %></th>
+<td>
+  <%= f.text_field :keyword1 %>
+</td>
+</tr>
+<tr>
+<th><%= f.label :keyword2 %></th>
+<td>
+  <%= f.text_field :keyword2 %>
+</td>
+</tr>
+<tr>
+<th><%= f.label :keyword3 %></th>
+<td>
+  <%= f.text_field :keyword3 %>
+</td>
+</tr>
+<tr>
+<th><%= f.label :keyword4 %></th>
+<td>
+  <%= f.text_field :keyword4 %>
+</td>
+</tr>
+<tr>
+<th><%= f.label :keyword5 %></th>
+<td>
+  <%= f.text_field :keyword5 %>
+</td>
+</tr>
+</table>
+
+</div>
+
+<%= yield :button %>
+
+<!--/ #main--></div>
+<!--/ #contents--></div>
+
+<% end %>

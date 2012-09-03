@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  area: 
+  category: 
+  collect_date: 2012-09-03
+
+two:
+  area: 
+  category: 
+  collect_date: 2012-09-03

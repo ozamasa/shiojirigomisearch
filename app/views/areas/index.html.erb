@@ -1,0 +1,61 @@
+<%= menu %>
+
+<div id="contents">
+<%= submenu %>
+
+<div id="main">
+
+<%= message %>
+
+<%= pagetitle :title => htitle(:area) %>
+
+<%= flash_tag %>
+
+<div class="commonBtnArea">
+<div class="leftBox">
+<%= search_tag %>
+</div>
+<div class="rightBox">
+<%= csv_button_tag %>
+<%= new_button_tag %>
+</div>
+<!--/ commonBtnArea--></div>
+
+<div class="list">
+<%= paginate_tag @areas %>
+<%= counter_tag %>
+<table class="commonList">
+<thead>
+  <tr>
+    <th><%=hlabel :area, :id %><%= sort_tag('id') %></th>
+    <th><%=hlabel :area, :name %><%= sort_tag('name')%></th>
+  </tr>
+</thead>
+<tbody>
+<% @areas.each do |area| %>
+  <tr>
+    <td><%=link_to area.id, area %></td>
+    <td><%=h area.name %></td>
+  </tr>
+<% end %>
+</tbody>
+</table>
+<!--/ list--></div>
+
+<div class="commonBtnArea">
+<div class="leftBox">
+<% form_tag({ :action => :upload }, { :multipart => true, :method => :post }) do  %>
+<h3><%= hlabel :commons, :upload_file %></h3>
+<%= note "インポートするファイルは「CSV出力」で出力したファイルを編集してください。" %><br>
+<%= note "データを新規登録する場合は「ID」列を空白にしてください。" %><br>
+
+<%= file_field_tag :file %>
+<%= submit_tag "インポート", :confirm => "インポートしますか？" %>
+<% end %>
+</div>
+<div class="centerBox">
+</div>
+<!--/ commonBtnArea--></div>
+
+<!--/ #main--></div>
+<!--/ #contents--></div>

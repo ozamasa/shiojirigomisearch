@@ -1,0 +1,49 @@
+<% form_for(@area) do |f| %>
+
+<%= menu %>
+<div id="contents">
+<%= submenu %>
+
+<div id="main">
+
+<%= message %>
+
+<%= pagetitle :title => htitle(:area) %>
+
+<div class="sheet">
+
+<%= flash_tag %>
+
+<% content_for :button do %>
+<div class="commonBtnArea">
+<div class="centerBox">
+<%= submit_button_tag(f) %>
+<%= back_button_tag %>
+<%= index_button_tag %>
+</div>
+<!--/ commonBtnArea--></div>
+<% end %>
+
+<%#= yield :button %>
+
+<%= pagesubtitle %>
+
+<table class="commonSheet">
+<tr>
+<th><%= f.label :name %></th>
+<td>
+  <%= h @area.name %>
+  <%= f.hidden_field :name %>
+</td>
+</tr>
+<%= f.hidden_field :lock_version %>
+</table>
+
+</div>
+
+<%= yield :button %>
+
+<!--/ #main--></div>
+<!--/ #contents--></div>
+
+<% end %>

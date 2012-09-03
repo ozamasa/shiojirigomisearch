@@ -1,0 +1,67 @@
+﻿@charset "utf-8";
+
+/* ------------------------------------------- CSS Information
+ File Name:      user.css
+ Author:
+ Style Info: default at "#703956"
+----------------------------------------------------------- */
+
+/* ----------------------------------- Layout Box Style --*/
+body {
+  background: #f4f4ff;
+  background: -moz-linear-gradient(top, #fff,  #f4f4ff);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f4f4ff', endColorstr='#ffffff');
+  background: -webkit-gradient(linear, left top, left bottom, from(#f4f4ff), to(#fff));
+}
+/*wrapper要素
+---------------------------------------- */
+div#wrapper {
+  border-left:  1px dotted #703956;
+  border-right: 1px dotted #703956;
+}
+/*header要素
+---------------------------------------- */
+div#header  {
+  border-top: solid 10px #703956;
+}
+
+/*----------------------- globalMenu Style-- */
+ul#navi li a {
+  color: #666;
+}
+
+ul#navi li a:hover {
+  color: #0000ff;
+}
+
+/*----------------------- main Style-- */
+#main .pageTitle h2 {
+  color: #666;
+  border-left: 10px solid #703956;
+  border-bottom: 1px solid #703956;
+}
+
+/*----------------------- sub Style-- */
+
+
+/*----------------------- footer Style-- */
+div#footer  {
+  border-bottom: solid 10px #703956;
+/*
+  background: transparent url(/images/footer_w_bak.gif) bottom right no-repeat;
+*/
+  height: 20px;
+}
+.pageTop a{
+  color: #666;
+}
+div#footer div#tip{
+  text-align:center;
+  background:  transparent url(/images/tip.png) 5% center no-repeat;
+/*
+  background-color:#703956;
+*/
+  color:#666;
+}
+
+

@@ -1,0 +1,86 @@
+ja:
+  success_default: "成功しました。"
+  success_created: "作成しました。（{{id}}）"
+  success_updated: "更新しました。（{{id}}）"
+  success_deleted: "削除しました。（{{id}}）"
+  success_imported: "インポートしました。（{{msg}}）"
+  success_sended: "送信しました。"
+  error_default:   "エラーが発生しました。管理者に連絡してください。<br>{{message}}"
+  error_authorize: "ログインしてください。"
+  error_login:     "ログインIDとパスワードが一致しません。"
+  error_pwd_match: "パスワードとパスワード（確認）が一致しません。"
+  error_upload:    "ファイルのアップロードに失敗しました。"
+  note_file_size:  "ファイルサイズの上限は1MBです。"
+
+  activerecord:
+    models:
+      area: "area"
+      collect_date: "collect_date"
+      category: "category"
+      garbage: "garbage"
+      tab: "タブ"
+      log: "ログ"
+      user: "ユーザー"
+
+    attributes:
+      area:
+        id: "ID"
+        name: "名前"
+
+      collect_date:
+        id: "ID"
+        area_id: "エリア"
+        category_id: "カテゴリ"
+        collect_date: "収集日"
+
+      category:
+        id: "ID"
+        name: "名前"
+        cycle: "頻度"
+        detail: "説明"
+        detail_url: "説明画像URL"
+        throw: "捨て方"
+        throw_url: "捨て方画像URL"
+
+      garbage:
+        id: "ID"
+        name: "名前"
+        ruby: "ルビ"
+        image_url: "画像URL"
+        category_id: "分類"
+        note: "処分方法"
+        gabage_station: "ステーション収集"
+        gabage_station: "ステーション収集"
+        keyword1: "キーワード1"
+        keyword2: "キーワード2"
+        keyword3: "キーワード3"
+        keyword4: "キーワード4"
+        keyword5: "キーワード5"
+
+      log:
+        id: "ログNO"
+        user_id: "ユーザーNO"
+        action: "アクション"
+        error: "エラー"
+
+      user:
+        id: "ユーザーNO"
+        name: "名前"
+        account: "ログインアカウント"
+        password_required: "現在のパスワード"
+        password_new: "新しいパスワード"
+        password_confirmation: "新しいパスワードの確認"
+
+      import:
+        file: "ファイルの選択"
+        button: "インポート"
+        message: "インポートしますか？"
+
+      commons:
+        id: "NO"
+        name: "名称"
+        created_at: "作成日時"
+        updated_at: "更新日時"
+        delete: "削除"
+        detail: "詳細"
+        upload_file: "インポートファイル"

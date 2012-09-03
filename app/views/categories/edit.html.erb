@@ -1,0 +1,79 @@
+<% form_for(@category, :url => { :action => :confirm }) do |f| %>
+
+<%= menu %>
+<div id="contents">
+<%= submenu %>
+
+<div id="main">
+
+<%= message %>
+
+<%= pagetitle :title => htitle(:category) %>
+
+<div class="sheet">
+
+<%= f.error_messages %>
+<%= flash_tag %>
+
+<% content_for :button do %>
+<div class="commonBtnArea">
+<div class="centerBox">
+<%= submit_button_tag(f) %>
+<%= index_button_tag %>
+</div>
+<!--/ commonBtnArea--></div>
+<% end %>
+
+<%#= yield :button %>
+
+<%= pagesubtitle %>
+<%= required_notice_tag %>
+
+<table class="commonSheet">
+<tr>
+<th><%= f.label :name %></th>
+<td>
+  <%= f.text_field :name %>
+</td>
+</tr>
+<tr>
+<th><%= f.label :cycle %></th>
+<td>
+  <%= f.text_field :cycle %>
+</td>
+</tr>
+<tr>
+<th><%= f.label :detail %></th>
+<td>
+  <%= f.text_area :detail, :size => "60x5" %>
+</td>
+</tr>
+<tr>
+<th><%= f.label :detail_url %></th>
+<td>
+  <%= f.text_field :detail_url %>
+</td>
+</tr>
+<tr>
+<th><%= f.label :throw %></th>
+<td>
+  <%= f.text_area :throw, :size => "60x5" %>
+</td>
+</tr>
+<tr>
+<th><%= f.label :throw_url %></th>
+<td>
+  <%= f.text_field :throw_url %>
+</td>
+</tr>
+<%= f.hidden_field :lock_version %>
+</table>
+
+</div>
+
+<%= yield :button %>
+
+<!--/ #main--></div>
+<!--/ #contents--></div>
+
+<% end %>

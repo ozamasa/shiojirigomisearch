@@ -1,0 +1,1 @@
+ruby ava_excel_rails-0.0.6.rb -i C:/Users/ozamasa/Desktop/shiojirigomi.xls -p C:/Users/ozamasa/Dropbox/GitAva/ava_excel_rails -c #703956 -n ÇµÇ®Ç∂ÇËÇ≤Ç›ÉTÅ[É`

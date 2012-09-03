@@ -1,0 +1,65 @@
+<%= menu %>
+
+<div id="contents">
+<%= submenu %>
+
+<div id="main">
+
+<%= message %>
+
+<%= pagetitle :title => htitle(:collect_date) %>
+
+<%= flash_tag %>
+
+<div class="commonBtnArea">
+<div class="leftBox">
+<%= search_tag %>
+</div>
+<div class="rightBox">
+<%= csv_button_tag %>
+<%= new_button_tag %>
+</div>
+<!--/ commonBtnArea--></div>
+
+<div class="list">
+<%= paginate_tag @collect_dates %>
+<%= counter_tag %>
+<table class="commonList">
+<thead>
+  <tr>
+    <th><%=hlabel :collect_date, :id %><%= sort_tag('id') %></th>
+    <th><%=hlabel :collect_date, :area_id %><%= sort_tag('area')%></th>
+    <th><%=hlabel :collect_date, :category_id %><%= sort_tag('category')%></th>
+    <th><%=hlabel :collect_date, :collect_date %><%= sort_tag('collect_date')%></th>
+  </tr>
+</thead>
+<tbody>
+<% @collect_dates.each do |collect_date| %>
+  <tr>
+    <td><%=link_to collect_date.id, collect_date %></td>
+    <td><%=hname collect_date.area %></td>
+    <td><%=hname collect_date.category %></td>
+    <td><%=hdate collect_date.collect_date %></td>
+  </tr>
+<% end %>
+</tbody>
+</table>
+<!--/ list--></div>
+
+<div class="commonBtnArea">
+<div class="leftBox">
+<% form_tag({ :action => :upload }, { :multipart => true, :method => :post }) do  %>
+<h3><%= hlabel :commons, :upload_file %></h3>
+<%= note "インポートするファイルは「CSV出力」で出力したファイルを編集してください。" %><br>
+<%= note "データを新規登録する場合は「ID」列を空白にしてください。" %><br>
+
+<%= file_field_tag :file %>
+<%= submit_tag "インポート", :confirm => "インポートしますか？" %>
+<% end %>
+</div>
+<div class="centerBox">
+</div>
+<!--/ commonBtnArea--></div>
+
+<!--/ #main--></div>
+<!--/ #contents--></div>
