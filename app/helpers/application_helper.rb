@@ -165,7 +165,7 @@ EOS
     login_account = @user.account
     login_name    = @user.name
     company       = APP_COMPANY
-    link_database = '<li>' + link_to("データベース参照", "javascript:void(0);", :onclick => "javascript:pop('" + url_for(:controller => :databases, :action => :list) + "', '600', 'databasesetting');") + '</li>'
+    link_database = '' # '<li>' + link_to("データベース参照", "javascript:void(0);", :onclick => "javascript:pop('" + url_for(:controller => :databases, :action => :list) + "', '600', 'databasesetting');") + '</li>'
     link_password = '<li>' + link_to("パスワード変更",   "javascript:void(0);", :onclick => "javascript:pop('" + url_for(:controller => :auth, :action => :password ) + "', '600', 'passwordsetting');") + '</li>'
     link_logout   = '<li>' + link_to('ログアウト', :controller => :auth, :action => :logout  ) + '</li>'
 
@@ -310,10 +310,10 @@ EOS
   def menu(options = {})
 
     str = "<ul id =\"navi\">\n"
-    str = str + "<li>#{link_to(:top, :controller => :top)}</li>\n"
+#    str = str + "<li>#{link_to(:top, :controller => :top)}</li>\n"
     str = str + "<li>#{link_to(htitle(:garbage), :controller => :garbages)}</li>\n"
-    str = str + "<li>#{link_to(htitle(:category), :controller => :categories)}</li>\n"
     str = str + "<li>#{link_to(htitle(:collect_date), :controller => :collect_dates)}</li>\n"
+    str = str + "<li>#{link_to(htitle(:category), :controller => :categories)}</li>\n"
     str = str + "<li>#{link_to(htitle(:area), :controller => :areas)}</li>\n"
 #   str = str + "<li>#{link_to(:top, :controller => :tops)}</li>\n"
     str = str + "</ul>\n"

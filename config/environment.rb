@@ -75,6 +75,6 @@ Rails::Initializer.run do |config|
 
   DISPLAY_TYPE_SIMPLE = 'simple'
 
-  APP_COMPANY = 'しおじりごみサーチ'
-  APP_TITLE   = 'shiojirigomi'
+  APP_COMPANY = 'しおじりごみサーチβ'
+  APP_TITLE   = 'しおじりごみサーチ'
 end

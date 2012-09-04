@@ -27,7 +27,7 @@
 <table class="commonList">
 <thead>
   <tr>
-    <th><%=hlabel :collect_date, :id %><%= sort_tag('id') %></th>
+<!--     <th><%=hlabel :collect_date, :id %><%= sort_tag('id') %></th> -->
     <th><%=hlabel :collect_date, :area_id %><%= sort_tag('area')%></th>
     <th><%=hlabel :collect_date, :category_id %><%= sort_tag('category')%></th>
     <th><%=hlabel :collect_date, :collect_date %><%= sort_tag('collect_date')%></th>
@@ -36,10 +36,10 @@
 <tbody>
 <% @collect_dates.each do |collect_date| %>
   <tr>
-    <td><%=link_to collect_date.id, collect_date %></td>
-    <td><%=hname collect_date.area %></td>
+<!--     <td><%=link_to collect_date.id, collect_date %></td> -->
+    <td><%=link_to collect_date.area.name, collect_date %></td>
     <td><%=hname collect_date.category %></td>
-    <td><%=hdate collect_date.collect_date %></td>
+    <td><%=hdate collect_date.collect_date, :format => "%Y/%m/%d(%a)" %></td>
   </tr>
 <% end %>
 </tbody>

@@ -37,7 +37,7 @@
 <tr>
 <th><%= f.label :name %></th>
 <td>
-  <%= h @area.name %>
+  <%= f.text_field :name, :size => 60 %><%= required %>
   <%= f.hidden_field :name %>
 </td>
 </tr>

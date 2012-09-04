@@ -27,37 +27,41 @@
 <table class="commonList">
 <thead>
   <tr>
-    <th><%=hlabel :garbage, :id %><%= sort_tag('id') %></th>
+<!--    <th><%=hlabel :garbage, :id %><%= sort_tag('id') %></th> -->
     <th><%=hlabel :garbage, :name %><%= sort_tag('name')%></th>
     <th><%=hlabel :garbage, :ruby %><%= sort_tag('ruby')%></th>
     <th><%=hlabel :garbage, :image_url %><%= sort_tag('image_url')%></th>
     <th><%=hlabel :garbage, :category_id %><%= sort_tag('category')%></th>
+<!--
     <th><%=hlabel :garbage, :note %><%= sort_tag('note')%></th>
     <th><%=hlabel :garbage, :gabage_station %><%= sort_tag('gabage_station')%></th>
-    <th><%=hlabel :garbage, :gabage_station %><%= sort_tag('gabage_station')%></th>
+    <th><%=hlabel :garbage, :gabage_center %><%= sort_tag('gabage_center')%></th>
     <th><%=hlabel :garbage, :keyword1 %><%= sort_tag('keyword1')%></th>
     <th><%=hlabel :garbage, :keyword2 %><%= sort_tag('keyword2')%></th>
     <th><%=hlabel :garbage, :keyword3 %><%= sort_tag('keyword3')%></th>
     <th><%=hlabel :garbage, :keyword4 %><%= sort_tag('keyword4')%></th>
     <th><%=hlabel :garbage, :keyword5 %><%= sort_tag('keyword5')%></th>
+-->
   </tr>
 </thead>
 <tbody>
 <% @garbages.each do |garbage| %>
   <tr>
-    <td><%=link_to garbage.id, garbage %></td>
-    <td><%=h garbage.name %></td>
+<!--    <td><%=link_to garbage.id, garbage %></td> -->
+    <td><%=link_to garbage.name, garbage %></td>
     <td><%=h garbage.ruby %></td>
     <td><%=h garbage.image_url %></td>
     <td><%=hname garbage.category %></td>
+<!--
     <td><%=h garbage.note %></td>
     <td><%=h garbage.gabage_station %></td>
-    <td><%=h garbage.gabage_station %></td>
+    <td><%=h garbage.gabage_center %></td>
     <td><%=h garbage.keyword1 %></td>
     <td><%=h garbage.keyword2 %></td>
     <td><%=h garbage.keyword3 %></td>
     <td><%=h garbage.keyword4 %></td>
     <td><%=h garbage.keyword5 %></td>
+-->
   </tr>
 <% end %>
 </tbody>

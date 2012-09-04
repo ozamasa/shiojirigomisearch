@@ -1,5 +1,5 @@
 class TopController < ApplicationController
   def index
-#TODO    redirect_to(xxxs_url)
+    redirect_to(garbages_url)
   end
 end

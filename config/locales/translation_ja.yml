@@ -14,10 +14,10 @@ ja:
 
   activerecord:
     models:
-      area: "area"
-      collect_date: "collect_date"
-      category: "category"
-      garbage: "garbage"
+      area: "地区"
+      collect_date: "収集日"
+      category: "分類"
+      garbage: "ごみ"
       tab: "タブ"
       log: "ログ"
       user: "ユーザー"
@@ -50,7 +50,7 @@ ja:
         category_id: "分類"
         note: "処分方法"
         gabage_station: "ステーション収集"
-        gabage_station: "ステーション収集"
+        gabage_center: "クリーンセンター持込"
         keyword1: "キーワード1"
         keyword2: "キーワード2"
         keyword3: "キーワード3"

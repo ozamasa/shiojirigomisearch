@@ -2,7 +2,7 @@ class GarbagesController < ApplicationController
   # GET /garbages
   # GET /garbages.xml
   def index
-    @app_search.default 'id', 'asc'
+    @app_search.default 'ruby', 'asc'
 
     @app_search.sort 'id', 'garbages.id'
     @app_search.sort 'name', 'garbages.name'
@@ -11,19 +11,19 @@ class GarbagesController < ApplicationController
     @app_search.sort 'category', 'categories.name'
     @app_search.sort 'note', 'garbages.note'
     @app_search.sort 'gabage_station', 'garbages.gabage_station'
-    @app_search.sort 'gabage_station', 'garbages.gabage_station'
+    @app_search.sort 'gabage_center', 'garbages.gabage_center'
     @app_search.sort 'keyword1', 'garbages.keyword1'
     @app_search.sort 'keyword2', 'garbages.keyword2'
     @app_search.sort 'keyword3', 'garbages.keyword3'
     @app_search.sort 'keyword4', 'garbages.keyword4'
     @app_search.sort 'keyword5', 'garbages.keyword5'
 
-    @app_search.query = "garbages.name like ? or garbages.ruby like ? or garbages.image_url like ? or garbages.category_id like ? or categories.name like ? or garbages.note like ? or garbages.gabage_station like ? or garbages.gabage_station like ? or garbages.keyword1 like ? or garbages.keyword2 like ? or garbages.keyword3 like ? or garbages.keyword4 like ? or garbages.keyword5 like ? "
+    @app_search.query = "garbages.name like ? or garbages.ruby like ? or garbages.image_url like ? or garbages.category_id like ? or categories.name like ? or garbages.note like ? or garbages.gabage_station like ? or garbages.gabage_center like ? or garbages.keyword1 like ? or garbages.keyword2 like ? or garbages.keyword3 like ? or garbages.keyword4 like ? or garbages.keyword5 like ? "
 
     alls = Garbage.all(
             :include => [:category],
             :conditions => @app_search.conditions,
-#            :conditions => ["garbages.name like ? or garbages.ruby like ? or garbages.image_url like ? or garbages.category_id like ? or categories.name like ? or garbages.note like ? or garbages.gabage_station like ? or garbages.gabage_station like ? or garbages.keyword1 like ? or garbages.keyword2 like ? or garbages.keyword3 like ? or garbages.keyword4 like ? or garbages.keyword5 like ? ", @app_search.keyword, @app_search.keyword, @app_search.keyword, @app_search.keyword, @app_search.keyword, @app_search.keyword, @app_search.keyword, @app_search.keyword, @app_search.keyword, @app_search.keyword, @app_search.keyword, @app_search.keyword, @app_search.keyword],
+#            :conditions => ["garbages.name like ? or garbages.ruby like ? or garbages.image_url like ? or garbages.category_id like ? or categories.name like ? or garbages.note like ? or garbages.gabage_station like ? or garbages.gabage_center like ? or garbages.keyword1 like ? or garbages.keyword2 like ? or garbages.keyword3 like ? or garbages.keyword4 like ? or garbages.keyword5 like ? ", @app_search.keyword, @app_search.keyword, @app_search.keyword, @app_search.keyword, @app_search.keyword, @app_search.keyword, @app_search.keyword, @app_search.keyword, @app_search.keyword, @app_search.keyword, @app_search.keyword, @app_search.keyword, @app_search.keyword],
 #            :conditions => [@app_search.condition_query] + @app_search.condition_keyword,
 #            :conditions => [@app_search.condition_query + " and garbages.name = ?"] + @app_search.condition_keyword << 'abc',
             :order => @app_search.orderby

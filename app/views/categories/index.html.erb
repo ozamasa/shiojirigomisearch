@@ -16,7 +16,7 @@
 <%= search_tag %>
 </div>
 <div class="rightBox">
-<%= csv_button_tag %>
+<%#= csv_button_tag %>
 <%= new_button_tag %>
 </div>
 <!--/ commonBtnArea--></div>
@@ -27,25 +27,29 @@
 <table class="commonList">
 <thead>
   <tr>
-    <th><%=hlabel :category, :id %><%= sort_tag('id') %></th>
+<!--     <th><%=hlabel :category, :id %><%= sort_tag('id') %></th> -->
     <th><%=hlabel :category, :name %><%= sort_tag('name')%></th>
     <th><%=hlabel :category, :cycle %><%= sort_tag('cycle')%></th>
     <th><%=hlabel :category, :detail %><%= sort_tag('detail')%></th>
+<!--
     <th><%=hlabel :category, :detail_url %><%= sort_tag('detail_url')%></th>
     <th><%=hlabel :category, :throw %><%= sort_tag('throw')%></th>
     <th><%=hlabel :category, :throw_url %><%= sort_tag('throw_url')%></th>
+-->
   </tr>
 </thead>
 <tbody>
 <% @categories.each do |category| %>
   <tr>
-    <td><%=link_to category.id, category %></td>
-    <td><%=h category.name %></td>
+<!--     <td><%=link_to category.id, category %></td> -->
+    <td><%=link_to category.name, category %></td>
     <td><%=h category.cycle %></td>
     <td><%=h category.detail %></td>
+<!--
     <td><%=h category.detail_url %></td>
     <td><%=h category.throw %></td>
     <td><%=h category.throw_url %></td>
+-->
   </tr>
 <% end %>
 </tbody>
@@ -54,6 +58,7 @@
 
 <div class="commonBtnArea">
 <div class="leftBox">
+<!--
 <% form_tag({ :action => :upload }, { :multipart => true, :method => :post }) do  %>
 <h3><%= hlabel :commons, :upload_file %></h3>
 <%= note "インポートするファイルは「CSV出力」で出力したファイルを編集してください。" %><br>
@@ -62,6 +67,7 @@
 <%= file_field_tag :file %>
 <%= submit_tag "インポート", :confirm => "インポートしますか？" %>
 <% end %>
+-->
 </div>
 <div class="centerBox">
 </div>

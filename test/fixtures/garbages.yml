@@ -7,7 +7,7 @@ one:
   category: 
   note: MyText
   gabage_station: MyString
-  gabage_station: MyString
+  gabage_center: MyString
   keyword1: MyString
   keyword2: MyString
   keyword3: MyString
@@ -21,7 +21,7 @@ two:
   category: 
   note: MyText
   gabage_station: MyString
-  gabage_station: MyString
+  gabage_center: MyString
   keyword1: MyString
   keyword2: MyString
   keyword3: MyString

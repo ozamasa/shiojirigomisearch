@@ -46,6 +46,7 @@ ActiveRecord::Schema.define(:version => 8) do
     t.integer  "category_id"
     t.text     "note"
     t.string   "gabage_station"
+    t.string   "gabage_center"
     t.string   "keyword1"
     t.string   "keyword2"
     t.string   "keyword3"

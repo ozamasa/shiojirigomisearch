@@ -7,7 +7,7 @@ class CreateGarbages < ActiveRecord::Migration
       t.references :category
       t.text :note
       t.string :gabage_station
-      t.string :gabage_station
+      t.string :gabage_center
       t.string :keyword1
       t.string :keyword2
       t.string :keyword3

@@ -62,7 +62,7 @@ describe "garbage_spec" do
     page.select "id=garbage_category_id", "index=1"
     page.type   "id=garbage_note", "garbage_note"
     page.type   "id=garbage_gabage_station", "garbage_gabage_station"
-    page.type   "id=garbage_gabage_station", "garbage_gabage_station"
+    page.type   "id=garbage_gabage_center", "garbage_gabage_center"
     page.type   "id=garbage_keyword1", "garbage_keyword1"
     page.type   "id=garbage_keyword2", "garbage_keyword2"
     page.type   "id=garbage_keyword3", "garbage_keyword3"

@@ -2,7 +2,7 @@ class AreasController < ApplicationController
   # GET /areas
   # GET /areas.xml
   def index
-    @app_search.default 'id', 'asc'
+    @app_search.default 'name', 'asc'
 
     @app_search.sort 'id', 'areas.id'
     @app_search.sort 'name', 'areas.name'
