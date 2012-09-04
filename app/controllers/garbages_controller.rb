@@ -18,7 +18,7 @@ class GarbagesController < ApplicationController
     @app_search.sort 'keyword4', 'garbages.keyword4'
     @app_search.sort 'keyword5', 'garbages.keyword5'
 
-    @app_search.query = "garbages.name like ? or garbages.ruby like ? or garbages.image_url like ? or garbages.category_id like ? or categories.name like ? or garbages.note like ? or garbages.gabage_station like ? or garbages.gabage_center like ? or garbages.keyword1 like ? or garbages.keyword2 like ? or garbages.keyword3 like ? or garbages.keyword4 like ? or garbages.keyword5 like ? "
+    @app_search.query = "garbages.name like ? or garbages.ruby like ? or garbages.image_url like ? or categories.name like ? or garbages.note like ? or garbages.gabage_station like ? or garbages.gabage_center like ? or garbages.keyword1 like ? or garbages.keyword2 like ? or garbages.keyword3 like ? or garbages.keyword4 like ? or garbages.keyword5 like ? "
 
     alls = Garbage.all(
             :include => [:category],

@@ -9,7 +9,7 @@ class CollectDatesController < ApplicationController
     @app_search.sort 'category', 'categories.name'
     @app_search.sort 'collect_date', 'collect_dates.collect_date'
 
-    @app_search.query = "collect_dates.area_id like ? or areas.name like ? or collect_dates.category_id like ? or categories.name like ? or collect_dates.collect_date like ? "
+    @app_search.query = "areas.name like ? or categories.name like ? or collect_dates.collect_date like ? "
 
     alls = CollectDate.all(
             :include => [:area, :category],
