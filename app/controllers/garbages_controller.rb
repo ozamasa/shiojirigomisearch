@@ -2,7 +2,7 @@ class GarbagesController < ApplicationController
   # GET /garbages
   # GET /garbages.xml
   def index
-    @app_search.default 'ruby', 'asc'
+    @app_search.default 'name', 'asc'
 
     @app_search.sort 'id', 'garbages.id'
     @app_search.sort 'name', 'garbages.name'

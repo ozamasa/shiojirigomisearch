@@ -172,7 +172,7 @@ EOS
     str =<<"EOS"
 <div id="header">
 <a href="/">
-<h1 title="#{APP_TITLE}">TMS</h1></a>
+<h1 title="#{APP_TITLE}">#{APP_TITLE}</h1></a>
 <div id="hBox">
 <h2 id="hCompany">#{company}</h2>
 <ul id="hNavi">

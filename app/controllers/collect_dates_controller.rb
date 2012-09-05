@@ -9,14 +9,16 @@ class CollectDatesController < ApplicationController
     @app_search.sort 'category', 'categories.name'
     @app_search.sort 'collect_date', 'collect_dates.collect_date'
 
-    @app_search.query = "areas.name like ? or categories.name like ? or to_char(collect_dates.collect_date, 'yyyy/mm/dd') like ? "
+    @area_id = params[:area].blank? ? "1" : params[:area]
+
+#    @app_search.query = "areas.name like ? or categories.name like ? "
 
     alls = CollectDate.all(
             :include => [:area, :category],
-            :conditions => @app_search.conditions,
+            :conditions => ["areas.id = ?", @area_id],
+#            :conditions => @app_search.conditions,
 #            :conditions => ["collect_dates.area_id like ? or areas.name like ? or collect_dates.category_id like ? or categories.name like ? or collect_dates.collect_date like ? ", @app_search.keyword, @app_search.keyword, @app_search.keyword, @app_search.keyword, @app_search.keyword],
 #            :conditions => [@app_search.condition_query] + @app_search.condition_keyword,
-#            :conditions => [@app_search.condition_query + " and collect_dates.name = ?"] + @app_search.condition_keyword << 'abc',
             :order => @app_search.orderby
            )
     session_set_ids(alls)

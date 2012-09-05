@@ -16,6 +16,7 @@ ja:
     models:
       area: "地区"
       collect_date: "収集日"
+      collect date: "収集日"
       category: "分類"
       garbage: "ごみ"
       tab: "タブ"
@@ -30,7 +31,7 @@ ja:
       collect_date:
         id: "ID"
         area_id: "エリア"
-        category_id: "カテゴリ"
+        category_id: "分類"
         collect_date: "収集日"
 
       category:
@@ -45,7 +46,7 @@ ja:
       garbage:
         id: "ID"
         name: "名前"
-        ruby: "ルビ"
+        ruby: "るび"
         image_url: "画像URL"
         category_id: "分類"
         note: "処分方法"

@@ -37,17 +37,17 @@
 </td>
 </tr>
 <tr>
-<th><%= f.label :category %></th>
-<td>
-  <%= hname @collect_date.category %>
-  <%= f.hidden_field :category_id %>
-</td>
-</tr>
-<tr>
 <th><%= f.label :collect_date %></th>
 <td>
   <%= hdate @collect_date.collect_date %>
   <%= f.hidden_field :collect_date %>
+</td>
+</tr>
+<tr>
+<th><%= f.label :category %></th>
+<td>
+  <%= hname @collect_date.category %>
+  <%= f.hidden_field :category_id %>
 </td>
 </tr>
 <%= f.hidden_field :lock_version %>
