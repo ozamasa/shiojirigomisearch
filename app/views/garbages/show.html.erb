@@ -51,7 +51,7 @@
 <tr>
 <th><%= f.label :image_url %></th>
 <td>
-  <%= h @garbage.image_url %>
+  <%= h @garbage.image_url %><br><%= image_tag IMAGE_SERVER + @garbage.image_url unless @garbage.image_url.blank? %>
   <%= f.hidden_field :image_url %>
 </td>
 </tr>

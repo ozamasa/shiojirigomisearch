@@ -33,20 +33,24 @@
 <tr>
 <th><%= f.label :area %></th>
 <td>
-  <%= f.collection_select(:area_id, Area.find(:all), :id, :name, :include_blank => true) %><%= required %>
+  <%#= f.collection_select(:area_id, Area.find(:all), :id, :name, :include_blank => true) %><%#= required %>
+  <%= hname @collect_date.area %>
+  <%= f.hidden_field :area_id %>
 </td>
 </tr>
 <tr>
 <th><%= f.label :collect_date %></th>
 <td>
-  <%= f.date_select :collect_date %><%= required %>
-  <%= clear_cal_button_tag %>
+  <%#= f.date_select :collect_date %><%#= required %>
+  <%#= clear_cal_button_tag %>
+  <%= hdate @collect_date.collect_date %>
+  <%= f.hidden_field :collect_date %>
 </td>
 </tr>
 <tr>
 <th><%= f.label :category %></th>
 <td>
-  <%= f.collection_select(:category_id, Category.find(:all), :id, :name, :include_blank => true) %><%= required %>
+  <%= f.collection_select(:category_id, Category.find(:all), :id, :name, :include_blank => true) %><%#= required %>
 </td>
 </tr>
 <%= f.hidden_field :lock_version %>

@@ -20,31 +20,42 @@
 </div>
 <div class="rightBox">
 <%= csv_button_tag %>
-<%= new_button_tag %>
+<%#= new_button_tag %>
 </div>
 <!--/ commonBtnArea--></div>
 
 <div class="list">
-<%= paginate_tag @collect_dates %>
-<%= counter_tag %>
+<%#= paginate_tag @collect_dates %>
+<%#= counter_tag %>
+<br><h3><%= @area.name %></h3>
+<%=link_to "<< 前の月", :action => :index, :area => @area_id, :y => @py, :m => @pm %>
+&nbsp;
+<%=hdate @first_date, :format => "%Y年%m月" %>
+&nbsp;
+<%=link_to "次の月 >>", :action => :index, :area => @area_id, :y => @ny, :m => @nm %>
 <table class="commonList">
 <thead>
   <tr>
-<!--     <th><%=hlabel :collect_date, :id %><%= sort_tag('id') %></th>
-    <th><%=hlabel :collect_date, :area_id %><%#= sort_tag('area')%></th> -->
-    <th><%=hlabel :collect_date, :collect_date %><%#= sort_tag('collect_date')%></th>
-    <th><%=hlabel :collect_date, :category_id %><%#= sort_tag('category')%></th>
+    <th><%= "日" %></th>
+    <th><%= "月" %></th>
+    <th><%= "火" %></th>
+    <th><%= "水" %></th>
+    <th><%= "木" %></th>
+    <th><%= "金" %></th>
+    <th><%= "土" %></th>
   </tr>
 </thead>
 <tbody>
-<% @collect_dates.each do |collect_date| %>
-  <tr>
-<!--     <td><%=link_to collect_date.id, collect_date %></td>
-    <td><%=link_to collect_date.area.name, collect_date %></td> -->
-    <td><%=link_to (hdate collect_date.collect_date, :format => "%Y/%m/%d(%a)"), collect_date %></td>
-    <td><%=hname collect_date.category %></td>
-  </tr>
-<% end %>
+<%= "<tr>"  unless @first_date.cwday == 7 %>
+<% @first_date.cwday.to_i.times{ -%>
+<%= "<td width=><br></td>" %>
+<% } -%>
+
+<% @collect_dates.each do |collect_date| -%>
+<%= "<tr>"  if collect_date.collect_date.cwday == 7 %>
+    <td valign='top' width='80'><%=link_to (hdate collect_date.collect_date, :format => "%d"), collect_date %><br><%=hname collect_date.category %></td>
+<%= "</tr>" if collect_date.collect_date.cwday == 6 %>
+<% end -%>
 </tbody>
 </table>
 <!--/ list--></div>

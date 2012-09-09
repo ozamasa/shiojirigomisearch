@@ -47,7 +47,7 @@ ja:
         id: "ID"
         name: "名前"
         ruby: "るび"
-        image_url: "画像URL"
+        image_url: "イラスト"
         category_id: "分類"
         note: "処分方法"
         gabage_station: "ステーション収集"

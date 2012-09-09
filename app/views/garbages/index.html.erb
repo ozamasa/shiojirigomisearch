@@ -50,7 +50,7 @@
 <!--    <td><%=link_to garbage.id, garbage %></td> -->
     <td><%=link_to garbage.name, garbage %></td>
     <td><%=h garbage.ruby %></td>
-    <td><%=h garbage.image_url %></td>
+    <td><%=h garbage.image_url %><br><%= image_tag IMAGE_SERVER + garbage.image_url unless garbage.image_url.blank? %></td>
     <td><%=hname garbage.category %></td>
 <!--
     <td><%=h garbage.note %></td>

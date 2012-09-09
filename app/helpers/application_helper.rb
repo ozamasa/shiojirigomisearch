@@ -26,7 +26,7 @@ module ApplicationHelper
 
   # 日付表示
   def hdate(obj, options = {})
-    format = "%Y/%m/%d" #:default
+    format = "%Y/%m/%d(%a)" #:default
     format = options[:format] unless options[:format].blank?
     I18n.l obj, :format => format unless obj.blank?
   end
