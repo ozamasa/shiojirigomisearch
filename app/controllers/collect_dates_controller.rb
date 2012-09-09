@@ -31,8 +31,9 @@ class CollectDatesController < ApplicationController
 #    @app_search.query = "areas.name like ? or categories.name like ? "
 
     alls = CollectDate.all(
-            :include => [:area, :category],
-            :conditions => ["areas.id = ? and strftime('%Y%m', collect_date) = ?", @area_id, "#{@cy}#{@cm}"],
+            :include => [:area, :category], 
+            :conditions => ["areas.id = ? and to_char(collect_date, 'yyyyMM') = ?", @area_id, "#{@cy}#{@cm}"],
+# strftime('%Y%m', collect_date)
 #            :conditions => @app_search.conditions,
 #            :conditions => ["collect_dates.area_id like ? or areas.name like ? or collect_dates.category_id like ? or categories.name like ? or collect_dates.collect_date like ? ", @app_search.keyword, @app_search.keyword, @app_search.keyword, @app_search.keyword, @app_search.keyword],
 #            :conditions => [@app_search.condition_query] + @app_search.condition_keyword,
