@@ -7,7 +7,7 @@ class CreateCategoryGroups < ActiveRecord::Migration
       t.timestamps
     end
 
-    CategoryGroup.create(:name => 'プラスチック製容器包装')
+    CategoryGroup.create(:name => 'プラ製容器包装')
     CategoryGroup.create(:name => '紙類・ペットボトル')
     CategoryGroup.create(:name => '缶類・びん類・布類')
     CategoryGroup.create(:name => 'その他金属')
