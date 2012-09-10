@@ -27,12 +27,18 @@
 <div class="list">
 <%#= paginate_tag @collect_dates %>
 <%#= counter_tag %>
-<br><h3><%= @area.name %></h3>
-<%=link_to "<< 前の月", :action => :index, :area => @area_id, :y => @py, :m => @pm %>
-&nbsp;
+<h3 align="right">
+<%= @area.name %>
+</h3>
+<h2>
 <%=hdate @first_date, :format => "%Y年%m月" %>
+<font size="-1">
+<%=link_to "&laquo;前月", :action => :index, :a => @area_id, :y => @py, :m => @pm %>
 &nbsp;
-<%=link_to "次の月 >>", :action => :index, :area => @area_id, :y => @ny, :m => @nm %>
+<%=link_to "今月", :action => :index, :a => @area_id, :y => Time.now.year, :m => Time.now.month %>
+&nbsp;
+<%=link_to "次月&raquo;", :action => :index, :a => @area_id, :y => @ny, :m => @nm %>
+</h2>
 <table class="commonList">
 <thead>
   <tr>
@@ -46,15 +52,17 @@
   </tr>
 </thead>
 <tbody>
-<%= "<tr>"  unless @first_date.cwday == 7 %>
+<% if @collect_dates.size > 0 -%>
+<%= "<tr>" unless @first_date.cwday == 7 %>
 <% @first_date.cwday.to_i.times{ -%>
 <%= "<td width=><br></td>" %>
 <% } -%>
 
 <% @collect_dates.each do |collect_date| -%>
-<%= "<tr>"  if collect_date.collect_date.cwday == 7 %>
-    <td valign='top' width='80'><%=link_to (hdate collect_date.collect_date, :format => "%d"), collect_date %><br><%=hname collect_date.category %></td>
-<%= "</tr>" if collect_date.collect_date.cwday == 6 %>
+<%= "<tr>"  if collect_date.collect_date.to_date.cwday == 7 %>
+    <td valign='top' width='80'><%=link_to (hdate collect_date.collect_date, :format => "%d"), collect_date %><br><%=hname collect_date.category_group %></td>
+<%= "</tr>" if collect_date.collect_date.to_date.cwday == 6 %>
+<% end -%>
 <% end -%>
 </tbody>
 </table>

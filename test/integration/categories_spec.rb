@@ -57,6 +57,7 @@ describe "category_spec" do
     click "css=img[alt=\"新規作成\"]", "new"
 
     page.type   "id=category_name", "category_name"
+    page.select "id=category_category_group_id", "index=1"
     page.type   "id=category_cycle", "category_cycle"
     page.type   "id=category_detail", "category_detail"
     page.type   "id=category_detail_url", "category_detail_url"
@@ -72,6 +73,7 @@ describe "category_spec" do
     click "css=img[alt=\"修正\"]", "edit"
 
     page.type   "id=category_name", "category_name_after"
+    page.select "id=category_category_group_id", "index=2"
     page.type   "id=category_cycle", "category_cycle_after"
     page.type   "id=category_detail", "category_detail_after"
     page.type   "id=category_detail_url", "category_detail_url_after"

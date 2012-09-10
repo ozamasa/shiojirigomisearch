@@ -37,6 +37,13 @@
 </td>
 </tr>
 <tr>
+<th><%= f.label :category_group %></th>
+<td>
+  <%= hname @category.category_group %>
+  <%= f.hidden_field :category_group_id %>
+</td>
+</tr>
+<tr>
 <th><%= f.label :cycle %></th>
 <td>
   <%= h @category.cycle %>

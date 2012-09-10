@@ -45,6 +45,10 @@ ActionController::Routing::Routes.draw do |map|
 
   map.connect '/tab',  :controller => :tab,    :action => :index
 
+  map.connect '/mobile/calendar/:area',  :controller => :mobile, :action => :calendar, :conditions => {:method => :get}
+  map.connect '/mobile/search/:keyword', :controller => :mobile, :action => :search,   :conditions => {:method => :get}
+  map.connect '/mobile/garbage/:id',     :controller => :mobile, :action => :garbage,  :conditions => {:method => :get}
+
   map.connect '/databases',                    :controller => :databases, :action => :list
   map.connect '/database/:tablename.:format',  :controller => :databases, :action => :index
   map.connect '/database/new/:tablename',      :controller => :databases, :action => :new

@@ -18,6 +18,7 @@ ja:
       collect_date: "収集日"
       collect date: "収集日"
       category: "分類"
+      category_group: "分類グループ"
       garbage: "ごみ"
       tab: "タブ"
       log: "ログ"
@@ -31,8 +32,8 @@ ja:
       collect_date:
         id: "ID"
         area_id: "エリア"
-        category_id: "分類"
         collect_date: "収集日"
+        category_group_id: "分類グループ"
 
       category:
         id: "ID"
@@ -42,6 +43,11 @@ ja:
         detail_url: "説明画像URL"
         throw: "捨て方"
         throw_url: "捨て方画像URL"
+        category_group_id: "分類グループ"
+
+      category_group:
+        id: "ID"
+        name: "名前"
 
       garbage:
         id: "ID"

@@ -7,6 +7,7 @@ one:
   detail_url: MyString
   throw: MyText
   throw_url: MyString
+  category_group: 
 
 two:
   name: MyString
@@ -15,3 +16,4 @@ two:
   detail_url: MyString
   throw: MyText
   throw_url: MyString
+  category_group: 

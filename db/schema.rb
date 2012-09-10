@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 10) do
+ActiveRecord::Schema.define(:version => 11) do
 
   create_table "areas", :force => true do |t|
     t.string   "name"
@@ -25,6 +25,14 @@ ActiveRecord::Schema.define(:version => 10) do
     t.string   "detail_url"
     t.text     "throw"
     t.string   "throw_url"
+    t.integer  "lock_version",      :default => 0, :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "category_group_id"
+  end
+
+  create_table "category_groups", :force => true do |t|
+    t.string   "name"
     t.integer  "lock_version", :default => 0, :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -32,9 +40,9 @@ ActiveRecord::Schema.define(:version => 10) do
 
   create_table "collect_dates", :force => true do |t|
     t.integer  "area_id"
-    t.integer  "category_id"
-    t.date     "collect_date"
-    t.integer  "lock_version", :default => 0, :null => false
+    t.integer  "category_group_id"
+    t.datetime "collect_date"
+    t.integer  "lock_version",      :default => 0, :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

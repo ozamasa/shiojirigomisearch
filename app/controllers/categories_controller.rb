@@ -11,11 +11,12 @@ class CategoriesController < ApplicationController
     @app_search.sort 'detail_url', 'categories.detail_url'
     @app_search.sort 'throw', 'categories.throw'
     @app_search.sort 'throw_url', 'categories.throw_url'
+    @app_search.sort 'category_group', 'category_groups.name'
 
-    @app_search.query = "categories.name like ? or categories.cycle like ? or categories.detail like ? or categories.detail_url like ? or categories.throw like ? or categories.throw_url like ? "
+    @app_search.query = "categories.name like ? or categories.cycle like ? or categories.detail like ? or categories.detail_url like ? or categories.throw like ? or categories.throw_url like ?"
 
     alls = Category.all(
-#            :include => [],
+            :include => [:category_group],
             :conditions => @app_search.conditions,
 #            :conditions => ["categories.name like ? or categories.cycle like ? or categories.detail like ? or categories.detail_url like ? or categories.throw like ? or categories.throw_url like ? ", @app_search.keyword, @app_search.keyword, @app_search.keyword, @app_search.keyword, @app_search.keyword, @app_search.keyword],
 #            :conditions => [@app_search.condition_query] + @app_search.condition_keyword,
