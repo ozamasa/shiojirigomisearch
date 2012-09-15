@@ -10,24 +10,38 @@ class MobileController < ApplicationController
               :include => [:category],
               :conditions => @app_search.conditions
              )
-      json = alls.to_json
-    rescue
-      json = { "error" => true }.to_json
+
+      datas = Array.new
+      alls.each{|all|
+        data = SearchData.new
+        data.name = all.name
+        data.image_url = IMAGE_SERVER + all.image_url unless all.image_url.blank?
+        datas << data
+      }
+
+      json = datas.to_json
+    rescue => e
+      json = { :error => true, :discription => e.message }.to_json
     end
 
-    render_json :json => json
+    render_json json
   end
 
   # GET /garbage
   def garbage
     begin
       garbage = Garbage.find(params[:id])
-      json = garbage.to_json
-    rescue
-      json = { "error" => true }.to_json
+
+      data = GarbageData.new
+      data.name = garbage.name
+      data.image_url = IMAGE_SERVER + garbage.image_url unless garbage.image_url.blank?
+
+      json = data.to_json
+    rescue => e
+      json = { :error => true, :discription => e.message }.to_json
     end
 
-    render_json :json => json
+    render_json json
   end
 
 
@@ -42,7 +56,7 @@ PRODID:-//shiojiri.heroku.com
 VERSION:2.0
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:しおじりごみ収集日カレンダー（#{area.name}）
+X-WR-CALNAME:しおじりごみ収集日カレンダー #{area.name}
 X-WR-TIMEZONE:Asia/Tokyo
 BEGIN:VTIMEZONE
 TZID:Asia/Tokyo
@@ -99,4 +113,14 @@ protected
     end
     render({:content_type => :js, :text => response})
   end
+end
+
+class SearchData
+  attr_accessor :name
+  attr_accessor :image_url
+end
+
+class GarbageData
+  attr_accessor :name
+  attr_accessor :image_url
 end

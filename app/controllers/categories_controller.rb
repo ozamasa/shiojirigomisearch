@@ -78,7 +78,7 @@ class CategoriesController < ApplicationController
       flash[:notice] = t(:success_created, :id => @category.id)
       redirect_to(categories_url)
     rescue => e
-      flash[:error]  = t(:error_default, :message => e.message)
+#      flash[:error]  = t(:error_default, :message => e.message)
       render :action => :new
     end
   end
@@ -101,7 +101,7 @@ class CategoriesController < ApplicationController
       flash[:notice] = t(:success_updated, :id => @category.id)
       redirect_to(categories_url)
     rescue => e
-      flash[:error]  = t(:error_default, :message => e.message)
+#      flash[:error]  = t(:error_default, :message => e.message)
       render :action => :edit
     end
   end

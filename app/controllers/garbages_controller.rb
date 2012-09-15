@@ -83,7 +83,7 @@ class GarbagesController < ApplicationController
       flash[:notice] = t(:success_created, :id => @garbage.id)
       redirect_to(garbages_url)
     rescue => e
-      flash[:error]  = t(:error_default, :message => e.message)
+#      flash[:error]  = t(:error_default, :message => e.message)
       render :action => :new
     end
   end
@@ -106,7 +106,7 @@ class GarbagesController < ApplicationController
       flash[:notice] = t(:success_updated, :id => @garbage.id)
       redirect_to(garbages_url)
     rescue => e
-      flash[:error]  = t(:error_default, :message => e.message)
+#      flash[:error]  = t(:error_default, :message => e.message)
       render :action => :edit
     end
   end

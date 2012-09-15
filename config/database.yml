@@ -18,6 +18,14 @@ test:
 # MySQL 5.x
 #   create database shiojirigomi;
 #   grant all privileges on shiojirigomi.* to shiojirigomi@localhost identified by 'pass';
+# production:
+#   adapter: mysql2
+#   encoding: utf8
+#   username: sqale_204a92c6a1
+#   password: d093677f2aa32c9aa624dbe1f5ed21af21cf21c2f7f1235b
+#   database: sqale_204a92c6a1
+#   host: mysql001.sqale.jp
+
 production:
   adapter: mysql
   encoding: utf8

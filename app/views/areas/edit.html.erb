@@ -1,4 +1,4 @@
-<% form_for(@area, :url => { :action => :confirm }) do |f| %>
+<% form_for(@area, :url => { :action => :update }) do |f| %>
 
 <%= menu %>
 <div id="contents">
@@ -18,7 +18,7 @@
 <% content_for :button do %>
 <div class="commonBtnArea">
 <div class="centerBox">
-<%= submit_button_tag(f) %>
+<%= submit_button_tag(f, :value => '/images/btn_update.png') %>
 <%= index_button_tag %>
 </div>
 <!--/ commonBtnArea--></div>

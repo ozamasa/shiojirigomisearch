@@ -27,14 +27,12 @@
 <table class="commonList">
 <thead>
   <tr>
-<!--     <th><%=hlabel :area, :id %><%= sort_tag('id') %></th> -->
     <th><%=hlabel :area, :name %><%= sort_tag('name')%></th>
   </tr>
 </thead>
 <tbody>
 <% @areas.each do |area| %>
   <tr>
-<!--     <td><%=link_to area.id, area %></td> -->
     <td><%=link_to area.name, area %></td>
   </tr>
 <% end %>

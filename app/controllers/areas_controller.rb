@@ -72,7 +72,7 @@ class AreasController < ApplicationController
       flash[:notice] = t(:success_created, :id => @area.id)
       redirect_to(areas_url)
     rescue => e
-      flash[:error]  = t(:error_default, :message => e.message)
+#      flash[:error]  = t(:error_default, :message => e.message)
       render :action => :new
     end
   end
@@ -95,7 +95,7 @@ class AreasController < ApplicationController
       flash[:notice] = t(:success_updated, :id => @area.id)
       redirect_to(areas_url)
     rescue => e
-      flash[:error]  = t(:error_default, :message => e.message)
+#      flash[:error]  = t(:error_default, :message => e.message)
       render :action => :edit
     end
   end
