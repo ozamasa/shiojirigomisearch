@@ -86,6 +86,13 @@ class MobileController < ApplicationController
     render_json json
   end
 
+  # GET /garbages/1
+  # GET /garbages/1.xml
+  def detail
+    @display_type = DISPLAY_TYPE_SIMPLE
+    @garbage = Garbage.find(params[:id])
+  end
+
   # GET /areas
   def areas
     begin

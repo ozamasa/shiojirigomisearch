@@ -48,6 +48,7 @@ ActionController::Routing::Routes.draw do |map|
   map.connect '/mobile/calendar/:area',  :controller => :mobile, :action => :calendar, :conditions => {:method => :get}
   map.connect '/mobile/search/:keyword', :controller => :mobile, :action => :search,   :conditions => {:method => :get}
   map.connect '/mobile/garbage/:id',     :controller => :mobile, :action => :garbage,  :conditions => {:method => :get}
+  map.connect '/mobile/detail/:id',      :controller => :mobile, :action => :detail,   :conditions => {:method => :get}
   map.connect '/mobile/areas',           :controller => :mobile, :action => :areas,    :conditions => {:method => :get}
 
   map.connect '/databases',                    :controller => :databases, :action => :list

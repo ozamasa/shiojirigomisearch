@@ -38,7 +38,7 @@
   <tr>
     <td><%=link_to garbage.name, garbage %></td>
     <td><%=h garbage.ruby %></td>
-    <td><%=h garbage.image_url %><br><%= image_tag IMAGE_SERVER + garbage.image_url unless garbage.image_url.blank? %></td>
+    <td><%=h garbage.image_url %><br><%= link_to_if !garbage.image_url.blank?, ((image_tag IMAGE_SERVER + garbage.image_url, :size => "115x115") unless garbage.image_url.blank?), "javascript:window.open('/mobile/detail/#{garbage.id}', 'popsample', 'width=480, height=720, menubar=no, toolbar=no, scrollbars=yes, resizable=yes').focus();" %></td>
     <td><%=hname garbage.category %></td>
   </tr>
 <% end %>
