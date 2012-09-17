@@ -64,7 +64,7 @@ class MobileController < ApplicationController
         data.category_throw_url = garbage.category.throw_url.blank? ? "" : IMAGE_SERVER + garbage.category.throw_url
       end
 
-#      begin
+      begin
         area = Area.find(params[:area].to_i)
         data.area_name = area.name
         collect_date = CollectDate.minimum(
@@ -75,8 +75,8 @@ class MobileController < ApplicationController
         data.collect_date = collect_date.strftime("%m/%d(#{%w(日 月 火 水 木 金 土)[collect_date.wday]})")
 # datetime('now', 'localtime')
 # current_timestamp
-#      rescue => e
-#      end
+      rescue => e
+      end
 
       json = data.to_json
     rescue => e
