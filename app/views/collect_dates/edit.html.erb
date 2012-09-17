@@ -50,7 +50,7 @@
 <tr>
 <th><%= f.label :category_group %></th>
 <td>
-  <%= f.collection_select(:category_group_id, CategoryGroup.find(:all), :id, :name, :include_blank => true) %><%#= required %>
+  <%= f.collection_select(:category_group_id, CategoryGroup.find(:all, :order => :id), :id, :name, :include_blank => true) %><%#= required %>
 </td>
 </tr>
 <%= f.hidden_field :lock_version %>
