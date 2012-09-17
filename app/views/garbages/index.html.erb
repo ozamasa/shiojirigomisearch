@@ -21,6 +21,12 @@
 </div>
 <!--/ commonBtnArea--></div>
 
+<% content_for :head do %>
+function popSample(id){
+window.open('/mobile/detail/' + id, 'popsample', 'width=480, height=720, menubar=no, toolbar=no, scrollbars=yes, resizable=yes').focus();
+}
+<% end %>
+
 <div class="list">
 <%= paginate_tag @garbages %>
 <%= counter_tag %>
@@ -38,7 +44,7 @@
   <tr>
     <td><%=link_to garbage.name, garbage %></td>
     <td><%=h garbage.ruby %></td>
-    <td><%=h garbage.image_url %><br><%= link_to_if !garbage.image_url.blank?, ((image_tag IMAGE_SERVER + garbage.image_url, :size => "115x115") unless garbage.image_url.blank?), "javascript:window.open('/mobile/detail/#{garbage.id}', 'popsample', 'width=480, height=720, menubar=no, toolbar=no, scrollbars=yes, resizable=yes').focus();" %></td>
+    <td><%=h garbage.image_url %><br><%= link_to_if !garbage.image_url.blank?, ((image_tag IMAGE_SERVER + garbage.image_url, :size => "115x115") unless garbage.image_url.blank?), "javascript:popSample('#{garbage.id}');" %></td>
     <td><%=hname garbage.category %></td>
   </tr>
 <% end %>
