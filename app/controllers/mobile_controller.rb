@@ -70,7 +70,7 @@ class MobileController < ApplicationController
         collect_date = CollectDate.minimum(
                 :collect_date,
                 :include => [:area, {:category_group => [:category]}],
-                :conditions => ["collect_dates.collect_date >= current_timestamp and collect_dates.area_id = ? and (categories.id = ? and categories.category_group_id and collect_dates.category_group_id)", area.id, garbage.category_id]
+                :conditions => ["collect_dates.collect_date >= current_timestamp and collect_dates.area_id = ? and (categories.id = ? and categories.category_group_id = collect_dates.category_group_id)", area.id, garbage.category_id]
                )
         data.collect_date = collect_date.strftime("%m/%d(#{%w(日 月 火 水 木 金 土)[collect_date.wday]})")
 # datetime('now', 'localtime')
