@@ -10,31 +10,34 @@
 <link href="/mobile/css/contents.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="/mobile/js/iscroll.js"></script>
 <script>
-var myScroll;
-var a = 0;
-function loaded() {
-	setHeight();
-	myScroll = new iScroll('scroller', {desktopCompatibility:true});
-}
-function setHeight() {
-	var headerH = document.getElementById('header').offsetHeight,
-		footerH = document.getElementById('footer').offsetHeight,
-		wrapperH = window.innerHeight - headerH - footerH;
-	document.getElementById('wrapper').style.height = wrapperH + 'px';
-}
-window.addEventListener('onorientationchange' in window ? 'orientationchange' : 'resize', setHeight, false);
-document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
-document.addEventListener('DOMContentLoaded', loaded, false);	</script>
+	var myScroll;
+	var a = 0;
+	function loaded() {
+		setHeight();
+		myScroll = new iScroll('scroller', {desktopCompatibility:true});
+	}
+	function setHeight() {
+		var headerH = document.getElementById('header').offsetHeight,
+			footerH = document.getElementById('footer').offsetHeight,
+   			wrapperH = window.innerHeight - headerH - footerH;
+    	document.getElementById('wrapper').style.height = wrapperH + 'px';
+    }
+	window.addEventListener('onorientationchange' in window ? 'orientationchange' : 'resize', setHeight, false);
+	document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+	document.addEventListener('DOMContentLoaded', loaded, false);	</script>
 </head>
+
 <body>
 <!-- header --><header id="header">
-<div class="h_item">
-<h1 class="h_l"><img src="/mobile/images/h_logo.jpg" alt="アプリロゴエリア" width="52" height="52"></h1>
-<div class="h_r">
-<form><input id="h_textinput" value="ごみ名・キーワードを入力" type="search" class="h_textinput"><input type="image" src="/mobile/images/btn_serch.png"  alt="検索" class="h_btn" ></form>
-</div>
-</div>
-</header><!-- //header -->
+	<div class="h_item">
+    	<h1 class="h_l"><img src="/mobile/images/h_logo.png" alt="しおじりごみサーチ"></h1>
+        <div class="h_r">
+            <form><input id="h_textinput" value="ごみ名・キーワードを入力" type="search" class="h_textinput"><input type="image" src="/mobile/images/btn_serch.png"  alt="検索" class="h_btn" ></form>
+        </div>
+	</div>
+
+</header>
+<!-- //header -->
 <!-- wrapper --><div id="wrapper">
 <% form_for(@garbage) do |f| %>
 <% 5.times do %>
@@ -52,13 +55,17 @@ document.addEventListener('DOMContentLoaded', loaded, false);	</script>
 </section>
 <% end %>
 <% end %>
-</div><!-- //wrapper -->
+</div>
+<!-- //wrapper -->
 <!-- footer -->
 <footer id="footer">
-<ul>
-<li><a href="#"  class="f_btn_l">ホーム</a></li>
-<li class="f_btn_r"><a href="#" class="f_btn_r">設定</a></li>
-</ul>
-</footer><!-- //footer -->
+	<ul>
+		<li><a href="index.html"  class="f_btn_l">ホーム</a></li>
+		<li class="f_btn_r"><a href="#" class="f_btn_r">設定</a></li>
+	</ul>
+</footer>
+<!-- //footer -->
+
+
 </body>
 </html>

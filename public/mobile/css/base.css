@@ -14,6 +14,7 @@ ul li {
 */
 html, body{
 	text-align:center;
+	height: 100%;
 }
 body{
     font-size:90%;
@@ -24,11 +25,10 @@ body{
 	margin:0 auto;
 }
 #wrapper {
-	position:relative;
-	z-index:1;
 	width:100% ;
-	overflow:hidden;
 	clear:both;
+	overflow: scroll;
+	overflow-x:hidden;
 	}
 /*
 ======= 文字 =======
@@ -48,6 +48,9 @@ a:hover,a:active {
 #footer{
 	width: 100%;
 	clear:both;
+	position: relative;
+	bottom:0;
+	z-index: 1;
 }
 #footer ul{
 	width:100%;

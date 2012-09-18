@@ -15,14 +15,17 @@
 	background: -webkit-gradient(linear, left top, left bottom, from(#9a5979), to(#5e2c45)); /* Safari5.0 */
 	background: -o-linear-gradient(top, #9a5979, #5e2c45); /* Opera10- */
 	text-align:center;
+	position: relative;
+	top:0;
+	z-index: 2;
 }
 .h_item{
-	width:90%;
+	width:92%;
 	text-align:center;
 	margin:0 auto;
 	padding-top:10px;
-	padding-left:10px;
-	padding-right:10px;
+	padding-left:8px;
+	padding-right:8px;
 }
 .h_l{
 	width:10%;
@@ -31,11 +34,11 @@
 }
 .h_r{
 	float:right;
-	width:86%;
+	width:85%;
 }
 input.h_textinput{
 	height:45px;
-	width:73%;
+	width:70%;
 	margin-left:8px;
 	font-size:100%;
 	line-height:2.0;
@@ -66,10 +69,9 @@ input.h_btn{
 	width:100%;
 }
 .ilist_txt{
-	width:55%;
+	width:48%;
 	float:left;
 	text-align:left;
-	margin-left:5px;
 }
 .item_ttl{
 	font-size:150%;
@@ -79,16 +81,23 @@ input.h_btn{
 	padding:6px;
 	margin-top:10px;
 }
+.item_etc p{
+	font-size:90%;
+}
 .ilist_img{
-	width:28%;
-	margin-left:15px;
+	width:30%;
+	padding-left:10px;
+	padding-right:10px;
 	float:left;
 	text-align:center;
+}
+.ilist_img img{
+	vertical-align:middle;	
 }
 .ilist_arw{
 	width:10%;
 	float:right;
-	margin-right:5px;
+	padding-right:5px;
 	margin-top:54px;
 }
 .ilist_arw img{
@@ -150,7 +159,7 @@ input.h_btn{
 .d_btn_area{
 	width: 90%;
 	text-align:center;
-	margin:15px auto 0;
+	margin:15px auto 10px;
 	-webkit-appearance: none; /* Safari, Google Chrome */
 	-moz-appearance: none; /* Firefox */
 	-webkit-border-radius:8px; /* Safari, Google Chrome */

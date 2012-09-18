@@ -17,23 +17,23 @@ body {
 ---------------------------------------- */
 div#wrapper,
 div#wrapperPop {
-	background: #fff;
-	margin: 0 auto;
-	text-align: left;
-	border-left: 1px dotted #bbb;
-	border-right: 1px dotted #bbb;
+  background: #fff;
+  margin: 0 auto;
+  text-align: left;
+  border-left: 1px dotted #bbb;
+  border-right: 1px dotted #bbb;
 }
 
 div#wrapperPop {
-	border-bottom: 1px dotted #bbb;
+  border-bottom: 1px dotted #bbb;
 }
 
-div#wrapper	{
-	width: 950px;
+div#wrapper {
+  width: 950px;
 }
 
-div#wrapperPop	{
-	width: 650px;
+div#wrapperPop  {
+  width: 650px;
 }
 
 
@@ -41,74 +41,76 @@ div#wrapperPop	{
 ---------------------------------------- */
 div#header,
 div#wrapperPop div#header {
-	background: #fff;
-	padding: 0px 0px 0px 30px;
-	border-top: solid 5px #bbb; /* dynamic */
+  background: #fff;
+  padding: 0px 0px 0px 30px;
+  border-top: solid 5px #bbb; /* dynamic */
 }
 
 div#header {
-	width: 920px;
+  width: 920px;
 }
 
 div#wrapperPop div#header {
-	width: 620px;
+  width: 620px;
 }
 
 #header h1 {
-	margin: 0;
-	padding: 0;
-	background: url(/images/logo.png) no-repeat;
-	float: left;
-	width: 324px;
-	height: 80px;
-	text-indent:-100000em;
+  margin: 0;
+  padding: 0;
+  background: url(/images/top_logo.jpg) no-repeat;
+  -moz-background-size:contain;
+  background-size:contain;
+  float: left;
+  width: 324px;
+  height: 80px;
+  text-indent:-100000em;
 }
 
 #hBox {
-	width: 596px;
-	float: left;
-	padding-top: 10px;
+  width: 596px;
+  float: left;
+  padding-top: 10px;
 }
 #hMsgBox {
-	width: 100%;
-	float: left;
-	margin: -5px 0 5px 0;
+  width: 100%;
+  float: left;
+  margin: -5px 0 5px 0;
 }
 
 #header h2#hCompany {
-	text-align: right;
-	margin-right: 0.5em;
-	color:#666;
+  text-align: right;
+  margin-right: 0.5em;
+  color:#666;
 }
 
-#header ul#hNavi	{
-	text-align: right;
+#header ul#hNavi  {
+  text-align: right;
 }
-#header ul#hNavi li	{
-	display: inline;
-	margin-right: 0.5em;
+#header ul#hNavi li {
+  display: inline;
+  margin-right: 0.5em;
 }
 
-#header ul#hUser	{
-	text-align: right;
+#header ul#hUser  {
+  text-align: right;
 }
-#header ul#hUser li	{
-	display: inline;
-	margin-right: 0.5em;
+#header ul#hUser li {
+  display: inline;
+  margin-right: 0.5em;
 }
 
 #header ul#hNavi li a {
-	padding-left:10px;
-	background: transparent url(/images/link.gif) left center no-repeat;
-	text-decoration: none;
+  padding-left:10px;
+  background: transparent url(/images/link.gif) left center no-repeat;
+  text-decoration: none;
 }
 
-#header ul#hMsg	{
-	text-align: left;
+#header ul#hMsg {
+  text-align: left;
 }
-#header ul#hMsg li	{
-	display: inline;
-	margin-right: 0.5em;
+#header ul#hMsg li  {
+  display: inline;
+  margin-right: 0.5em;
 
 }
 
@@ -116,52 +118,52 @@ div#wrapperPop div#header {
 /*navi要素
 ---------------------------------------- */
 ul#navi {
-	margin: 0 auto;
-	padding: 0 2px;
-	width: 946px;
-	background-image: url(/images/g_navi_bak.gif);
-	background-repeat: repeat-x;
-	clear: both;
+  margin: 0 auto;
+  padding: 0 2px;
+  width: 946px;
+  background-image: url(/images/g_navi_bak.gif);
+  background-repeat: repeat-x;
+  clear: both;
 
 }
 
 ul#navi:after {
-	height: 0;
-	visibility: hidden;
-	content: ".";
-	display: block;
-	clear: both;
+  height: 0;
+  visibility: hidden;
+  content: ".";
+  display: block;
+  clear: both;
 }
 
 ul#navi li {
-	margin: 0 0 0 0;
-	padding: 0;
-	padding-left: 1px;
-	float: left;
-	width: 77.8px;
-	list-style-type: none;
-	text-align: center;
+  margin: 0 0 0 0;
+  padding: 0;
+  padding-left: 1px;
+  float: left;
+  width: 77.8px;
+  list-style-type: none;
+  text-align: center;
 }
 
 
 
 ul#navi li a {
-	padding: 8px 0 7px 0;
-	display: block;
-	background-image: url(/images/navis.gif);
-	background-repeat: no-repeat;
-	font-weight: bold;
-	font-size: 12px;
-	text-decoration: none;
-	color: #7f7fff; /* dynamic*/
+  padding: 8px 0 7px 0;
+  display: block;
+  background-image: url(/images/navis.gif);
+  background-repeat: no-repeat;
+  font-weight: bold;
+  font-size: 12px;
+  text-decoration: none;
+  color: #7f7fff; /* dynamic*/
 }
 
 ul#navi li a, x:-moz-any-link, x:default  {
-	font-size: 11px;
+  font-size: 11px;
 }
 
 ul#navi li a:hover {
-	color: #0000ff;
+  color: #0000ff;
 }
 
 
@@ -169,30 +171,30 @@ ul#navi li a:hover {
 ---------------------------------------- */
 
 div#contents,
-div#wrapperPop div#contents	{
-	margin: 0px 10px 0 10px;
-	padding: 0 10px 25px;
-	/*for mac-ie5.x*/
-	/*\*//*/
-	overflow:hidden;
-	/**/
-	clear: both;
+div#wrapperPop div#contents {
+  margin: 0px 10px 0 10px;
+  padding: 0 10px 25px;
+  /*for mac-ie5.x*/
+  /*\*//*/
+  overflow:hidden;
+  /**/
+  clear: both;
 }
 
-div#wrapperPop div#contents	{
-	width: 610px;
+div#wrapperPop div#contents {
+  width: 610px;
 }
 
-div#contents	{
-	width: 910px;
+div#contents  {
+  width: 910px;
 }
 
 div#contents:after{
-	height:	0;
-	visibility: hidden;
-	content: ".";
-	display: block;
-	clear: both;
+  height: 0;
+  visibility: hidden;
+  content: ".";
+  display: block;
+  clear: both;
 }
 
 
@@ -200,241 +202,241 @@ div#contents:after{
 ---------------------------------------- */
 div#main,
 div#wrapperPop  div#main {
-	padding: 5px;
-	float: left;
-	background: #fff;
-	margin-top: 0px;
+  padding: 5px;
+  float: left;
+  background: #fff;
+  margin-top: 0px;
 }
 
 div#wrapperPop  div#main {
-	width: 600px;
+  width: 600px;
 }
 
 div#main    {
 /*  width: 800px; *//*without subArea*/
-	width: 900px;
+  width: 900px;
 }
 
 /* pageTitle */
 #main .pageTitle h2 {
-	margin: 20px auto;
-	padding: 5px;
-	font-size: 180%;
-	line-height: 140%;
-	background-image: url(/images/pageTitle_bak.png);
-	background-repeat: repeat-x;
-	color: #666;
-	border-left: 10px solid #bbb;
-	border-bottom: 1px solid #bbb;
+  margin: 20px auto;
+  padding: 5px;
+  font-size: 180%;
+  line-height: 140%;
+  background-image: url(/images/pageTitle_bak.png);
+  background-repeat: repeat-x;
+  color: #666;
+  border-left: 10px solid #bbb;
+  border-bottom: 1px solid #bbb;
 }
 
 /*login要素
 -------------------- */
 div#loginArea {
-	width: 100%;
-	font-size:14px;
-	line-height:120%;
+  width: 100%;
+  font-size:14px;
+  line-height:120%;
 }
 
 
 
 div#login {
-	padding: 10px;
-	background-color: #fff;
-	/*float:left;*/
+  padding: 10px;
+  background-color: #fff;
+  /*float:left;*/
 }
 
 div#loginArea input {
-	margin: 5px;
+  margin: 5px;
 }
 div#loginArea dt{
-	margin-top: 5px;
+  margin-top: 5px;
 }
 
 div#loginBottom {
-	clear: both;
-	background-color: #fff;
+  clear: both;
+  background-color: #fff;
 }
 
 p.login {
-	margin: 20px auto;
+  margin: 20px auto;
 }
 
 
 /*message要素
 -------------------- */
 div#messageArea {
-	width: 100%;
-	font-size:12px;
-	line-height:140%;
+  width: 100%;
+  font-size:12px;
+  line-height:140%;
 }
 
 div#messageLeft, div#messageRight {
-	padding: 5px;
-	width: 400px;
-	background-color: #fff;
+  padding: 5px;
+  width: 400px;
+  background-color: #fff;
 }
 div#message {
-	padding: 10px 0;
-	width: 100%;
-	background-color: #fff;
+  padding: 10px 0;
+  width: 100%;
+  background-color: #fff;
 }
 
 div#messageLeft, div#message {
-	float: left;
+  float: left;
 }
 div#messageRight {
-	float: right;
+  float: right;
 }
 
 div#messageBottom {
-	clear: both;
-	background-color: #fff;
+  clear: both;
+  background-color: #fff;
 }
 
 div#messageRight li,
 div#message li{
-	padding: 5px;
-	border-top: 3px dotted #bcbcff;
-	display: list-item;
+  padding: 5px;
+  border-top: 3px dotted #bcbcff;
+  display: list-item;
 }
 
 div#messageRight li:first-child,
 div#message li:first-child {
-	padding: 5px;
-	border-top: 0px dotted #bcbcff;
+  padding: 5px;
+  border-top: 0px dotted #bcbcff;
 }
 
 div#messageRight li a,
 div#message li a {
-	display:block;
-	padding-left: 20px;
-	background: transparent url(/images/arrow_h.gif) 0 0 no-repeat;
+  display:block;
+  padding-left: 20px;
+  background: transparent url(/images/arrow_h.gif) 0 0 no-repeat;
 }
 
 div#messageRight li a:link,
 div#message li a:link{
-	background: transparent url(/images/arrow_h.gif) 0 0 no-repeat;
-	color:#7f7fff;
+  background: transparent url(/images/arrow_h.gif) 0 0 no-repeat;
+  color:#7f7fff;
 }
 div#messageRight li a:visited,
 div#message li a:visited{
-	background: transparent url(/images/arrow_v.gif) 0 0 no-repeat;
-	color: #9933CC;
+  background: transparent url(/images/arrow_v.gif) 0 0 no-repeat;
+  color: #9933CC;
 }
 div#messageRight li a:hover,
 div#messageRight li a:active,
 div#message li a:hover,
 div#message li a:active {
-	background: transparent url(/images/arrow_h.gif) 0 0 no-repeat;
+  background: transparent url(/images/arrow_h.gif) 0 0 no-repeat;
 }
 
 .corner {
-	background-color:#fff;
+  background-color:#fff;
 }
 .corner1, .corner2, .corner3, .corner4 {
-	overflow: hidden;
-	background-color: #f4f9ff;
+  overflow: hidden;
+  background-color: #f4f9ff;
 }
 .corner1 {
-	margin: 0 5px;
-	height: 1px;
+  margin: 0 5px;
+  height: 1px;
 }
 .corner2 {
-	margin: 0 3px;
-	height: 1px;
+  margin: 0 3px;
+  height: 1px;
 }
 .corner3 {
-	margin: 0 2px;
-	height: 1px;
+  margin: 0 2px;
+  height: 1px;
 }
 .corner4 {
-	margin: 0 1px;
-	height: 2px;
+  margin: 0 1px;
+  height: 2px;
 }
 .corner5 {
-	padding: 10px;
-	background-color: #f4f9ff;
-	/*background-image: url(/images/ann_back.png);*/
-	background-position: 96% 76%;
-	background-repeat: no-repeat;
-	/*min-height:100px;*/
-	height: auto !important;
+  padding: 10px;
+  background-color: #f4f9ff;
+  /*background-image: url(/images/ann_back.png);*/
+  background-position: 96% 76%;
+  background-repeat: no-repeat;
+  /*min-height:100px;*/
+  height: auto !important;
 }
 .corner5_2 {
-	padding: 10px;
-	background-color: #f4f9ff;
-	background-image: url(/images/ann_back02.png);
-	background-position: 96% 76%;
-	background-repeat: no-repeat;
-	min-height:50px;
-	height: auto !important;
+  padding: 10px;
+  background-color: #f4f9ff;
+  background-image: url(/images/ann_back02.png);
+  background-position: 96% 76%;
+  background-repeat: no-repeat;
+  min-height:50px;
+  height: auto !important;
 }
 .corner5_3 {
-	padding: 10px;
-	background-color: #f4f9ff;
-	background-image: url(/images/login_back01.png);
-	background-position: 96% 90%;
-	background-repeat: no-repeat;
-	min-height:50px;
-	height: auto !important;
+  padding: 10px;
+  background-color: #f4f9ff;
+  background-image: url(/images/login_back01.png);
+  background-position: 96% 90%;
+  background-repeat: no-repeat;
+  min-height:50px;
+  height: auto !important;
 }
 
 /* messageIcon */
 .msgMinus {
-	background: url(/images/bubble_minus.gif) center left no-repeat;
-	padding: 15px;
+  background: url(/images/bubble_minus.gif) center left no-repeat;
+  padding: 15px;
 
 }
 .msgPlus {
-	background: url(/images/bubble_plus.gif) center left no-repeat;
-	padding: 15px;
+  background: url(/images/bubble_plus.gif) center left no-repeat;
+  padding: 15px;
 }
 
 /* actionMessage */
 #main  div.actionMessage  {
-	font-size: 14px;
-	line-height: 120%;
-	margin: 20px;
-	padding: 10px;
-	background: #e2ffc6;
-	border: 1px solid #7fffbf;
+  font-size: 14px;
+  line-height: 120%;
+  margin: 20px;
+  padding: 10px;
+  background: #e2ffc6;
+  border: 1px solid #7fffbf;
 }
 
 /* errorMessage */
 #main .errorMessage {
-	font-size: 14px;
-	line-height: 120%;
-	background: #ffffc6;
-	margin: 20px;
-	padding: 10px;
-	border: 1px solid #ff7fbf;
+  font-size: 14px;
+  line-height: 120%;
+  background: #ffffc6;
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #ff7fbf;
 }
 
 /* confirmMessage */
 .cofirmNotice {
-	font-size: 14px;
-	line-height: 120%;
-	background: #ffffc6;
-	margin: 20px;
-	padding: 10px;
-	border: 1px solid #ffbf7f;
+  font-size: 14px;
+  line-height: 120%;
+  background: #ffffc6;
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #ffbf7f;
 }
 
 /* noticeMessage */
 .notice_icon_g,
 .notice_icon_p {
-	position: relative;
-	left: -20px;
-	top: -14px;
-	font-size: 14px;
-	padding: 10px 10px 10px 25px;
+  position: relative;
+  left: -20px;
+  top: -14px;
+  font-size: 14px;
+  padding: 10px 10px 10px 25px;
 }
 .notice_icon_g {
-	background: url('/images/bubble_ex_g.png') 0 0 no-repeat;
+  background: url('/images/bubble_ex_g.png') 0 0 no-repeat;
 }
 .notice_icon_p {
-	background: url('/images/bubble_ex_p.png') 0 0 no-repeat;
+  background: url('/images/bubble_ex_p.png') 0 0 no-repeat;
 }
 
 
@@ -442,219 +444,219 @@ div#message li a:active {
 -------------------- */
 
 ul#phase {
-	margin: 0 auto;
-	padding: 0 2px;
-	width: 100%;
-	background-image: url(/images/g_navi_bak.gif);
-	background-repeat: repeat-x;
-	clear: both;
+  margin: 0 auto;
+  padding: 0 2px;
+  width: 100%;
+  background-image: url(/images/g_navi_bak.gif);
+  background-repeat: repeat-x;
+  clear: both;
 
 }
 
 ul#phase:after {
-	height: 0;
-	visibility: hidden;
-	content: ".";
-	display: block;
-	clear: both;
+  height: 0;
+  visibility: hidden;
+  content: ".";
+  display: block;
+  clear: both;
 }
 
 ul#phase li {
-	margin: 0 0 0 0;
-	padding: 0;
-	padding-left: 1px;
-	float: left;
-	width: 85px;
-	list-style-type: none;
-	text-align: center;
+  margin: 0 0 0 0;
+  padding: 0;
+  padding-left: 1px;
+  float: left;
+  width: 85px;
+  list-style-type: none;
+  text-align: center;
 }
 
 ul#phase li a {
-	padding: 8px 0 7px 0;
-	display: block;
-	background-image: url(/images/navis.gif);
-	background-repeat: no-repeat;
+  padding: 8px 0 7px 0;
+  display: block;
+  background-image: url(/images/navis.gif);
+  background-repeat: no-repeat;
 
-	font-weight: bold;
-	font-size: 12px;
-	text-decoration: none;
-	color: #7f7fff; /* dynamic*/
+  font-weight: bold;
+  font-size: 12px;
+  text-decoration: none;
+  color: #7f7fff; /* dynamic*/
 }
 
 ul#phase li a:hover {
-	color: #0000ff;
+  color: #0000ff;
 }
 
 
 #tab {
-	float: left;
-	width: 100%;
-	font-size: 100%;
-	font-weight: bold;
-	letter-spacing: 2px;
-	line-height: normal;
-	border-bottom: 1px solid #24618E;
-	margin-bottom: 10px;
+  float: left;
+  width: 100%;
+  font-size: 100%;
+  font-weight: bold;
+  letter-spacing: 2px;
+  line-height: normal;
+  border-bottom: 1px solid #24618E;
+  margin-bottom: 10px;
 
 
 }
 #tab ul {
-	margin: 0;
-	padding: 10px 10px 0 10px;
-	list-style: none;
+  margin: 0;
+  padding: 10px 10px 0 10px;
+  list-style: none;
 }
 #tab li {
-	display: inline;
-	margin: 0;
-	padding: 0;
+  display: inline;
+  margin: 0;
+  padding: 0;
 }
 #tab a {
-	float: left;
-	background: url("/images/menuTabL.gif") no-repeat left top;
-	margin: 0;
-	padding: 0 0 0 5px;
-	text-decoration: none;
+  float: left;
+  background: url("/images/menuTabL.gif") no-repeat left top;
+  margin: 0;
+  padding: 0 0 0 5px;
+  text-decoration: none;
 }
 #tab a span {
-	float: left;
-	display: block;
-	background: url("/images/menuTabR.gif") no-repeat right top;
-	padding: 5px 15px 4px 10px;
-	color: #24618E;
-/*	color: #24618E;*/
+  float: left;
+  display: block;
+  background: url("/images/menuTabR.gif") no-repeat right top;
+  padding: 5px 15px 4px 10px;
+  color: #24618E;
+/*  color: #24618E;*/
 }
 /* Commented Backslash Hack hides rule from IE5-Mac \*/
-	#menuTab a span {float:none;}
+  #menuTab a span {float:none;}
 /* End IE5-Mac hack */
 #tab a:hover span {
-	color: #FFF;
+  color: #FFF;
 }
 #tab a:hover {
-	background-position: 0% -42px;
+  background-position: 0% -42px;
 }
 #tab a:hover span {
-	background-position: 100% -42px;
+  background-position: 100% -42px;
 }
 #tab #current a {
-	background-position: 0% -42px;
+  background-position: 0% -42px;
 }
 #tab #current a span {
-	background-position: 100% -42px;
-	color: #FFF;
+  background-position: 100% -42px;
+  color: #FFF;
 }
 
 #tab .current a {
-	background-position: 0% -42px;
+  background-position: 0% -42px;
 }
 #tab .current a span {
-	background-position: 100% -42px;
-	color: #FFF;
+  background-position: 100% -42px;
+  color: #FFF;
 }
 
 
 /*commonButton要素
 -------------------- */
 div.commonBtnArea {
-	clear: both;
-	margin-top: 5px;
-	padding: 10px 5px 5px 10px;
-	min-height: 40px;
-	background: -moz-linear-gradient(top,  #fff,  #e0e0ff); border-right:2px solid #eee; border-bottom:2px solid #ddd;
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e0e0ff');
-	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#e0e0ff));
-	overflow: auto;
+  clear: both;
+  margin-top: 5px;
+  padding: 10px 5px 5px 10px;
+  min-height: 40px;
+  background: -moz-linear-gradient(top,  #fff,  #e0e0ff); border-right:2px solid #eee; border-bottom:2px solid #ddd;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e0e0ff');
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#e0e0ff));
+  overflow: auto;
 }
 div.leftBox, div.rightBox, div.centerBox {
 }
 div.leftBox {
-	float: left;
-	display: inline-block;
+  float: left;
+  display: inline-block;
 }
 div.rightBox {
-	float: right;
-	display: inline-block;
+  float: right;
+  display: inline-block;
 }
 div.centerBox {
-	text-align:center;
-	margin: 0 auto;
+  text-align:center;
+  margin: 0 auto;
 }
 
 
 /*Page要素
 -------------------- */
 .pagination {
-	font-size: 120%;
-	padding: 10px;
-	margin: 5px 0;
-	float: left;
+  font-size: 120%;
+  padding: 10px;
+  margin: 5px 0;
+  float: left;
 }
 .pagination span,
 .pagination a {
-	padding: 0 5px;
+  padding: 0 5px;
 }
 .pagination .current {
-	font-size: 140%;
-	background: #EEE;
+  font-size: 140%;
+  background: #EEE;
 }
 .pagination .prev_page {
-	padding: 10px 10px 0 50px;
-	background: url(/images/arrow_l.png) bottom left no-repeat;
-	text-decoration: none;
+  padding: 10px 10px 0 50px;
+  background: url(/images/arrow_l.png) bottom left no-repeat;
+  text-decoration: none;
 }
 .pagination .next_page {
-	padding: 10px 50px 0 10px;
-	background: url(/images/arrow_r.png) bottom right no-repeat;
-	text-decoration: none;
+  padding: 10px 50px 0 10px;
+  background: url(/images/arrow_r.png) bottom right no-repeat;
+  text-decoration: none;
 }
 ul.prevnxt{
-	width: 178px;
+  width: 178px;
 }
 
 li.prevnxt {
-	display: inline;
+  display: inline;
 }
 
 
 /*Table要素
 -------------------- */
 table {
-	width: 100%;
+  width: 100%;
 }
 
 th.indent1{
-	text-indent: 20px;
+  text-indent: 20px;
 }
 th.indent2{
-	text-indent: 40px;
+  text-indent: 40px;
 }
 th.indent3{
-	text-indent: 60px;
+  text-indent: 60px;
 }
 
 
 #wrapperPop th.indent1{
-	text-indent: 10px;
+  text-indent: 10px;
 }
 #wrapperPop th.indent2{
-	text-indent: 20px;
+  text-indent: 20px;
 }
 #wrapperPop th.indent3{
-	text-indent: 30px;
+  text-indent: 30px;
 }
 
 /*Sheet要素
  -------------------- */
 .sheet {
-	clear: both;
+  clear: both;
 }
 .sheet h3 {
-	margin-top: 10px;
-	font-size: 14px;
+  margin-top: 10px;
+  font-size: 14px;
 }
 
 .commonSheet {
-	border: 1px solid #bbb;
-	background: #FFF;
+  border: 1px solid #bbb;
+  background: #FFF;
 }
 
 .commonSheet tr {
@@ -662,34 +664,34 @@ th.indent3{
 }
 
 .commonSheet tr:first-child th {
-	border-top: 1px solid #aaa;
+  border-top: 1px solid #aaa;
 }
 
 .commonSheet th,
 .commonSheet td{
-	padding: 5px;
-	margin: 5px;
+  padding: 5px;
+  margin: 5px;
 }
 
 .commonSheet th {
-	border-top: 1px solid #eee;
-	background: #aaa;
-	color: #fff;
-	width: 20%;
+  border-top: 1px solid #eee;
+  background: #aaa;
+  color: #fff;
+  width: 20%;
 }
 
 .commonSheet td {
-	border: 1px solid #bbb;
+  border: 1px solid #bbb;
 }
 .commonSheet .even{
-	background: #EEE;
+  background: #EEE;
 }
 
 #upload_frame {
-	width: 100%;
-	height: 180px;
-	border: none;
-	overflow:visible;
+  width: 100%;
+  height: 180px;
+  border: none;
+  overflow:visible;
 }
 #upload_flame body{
   background: #ffffff;
@@ -699,68 +701,68 @@ th.indent3{
 /*List要素
 -------------------- */
 .list {
-	clear: both;
+  clear: both;
 }
 
 .commonList {
-	clear: both;
-	border: 1px solid #bbb;
-	background: #FFF;
+  clear: both;
+  border: 1px solid #bbb;
+  background: #FFF;
 }
 
 .commonList th:first-child {
-	border-left: 1px solid #aaa;
+  border-left: 1px solid #aaa;
 }
 
 .commonList th,
 .commonList td {
-	padding: 5px;
-	margin: 5px;
+  padding: 5px;
+  margin: 5px;
 
 }
 .commonList th {
-	background: #aaa;
-	color: #fff;
-	border-left:1px solid #eee;
-	white-space: nowrap;
+  background: #aaa;
+  color: #fff;
+  border-left:1px solid #eee;
+  white-space: nowrap;
 }
 .commonList th.wrap {
-	background: #aaa;
-	color: #fff;
-	border-left:1px solid #eee;
-	white-space: normal;
+  background: #aaa;
+  color: #fff;
+  border-left:1px solid #eee;
+  white-space: normal;
 }
 .commonList td {
-	border: 1px solid #bbb;
+  border: 1px solid #bbb;
 }
 .commonList tr {
 
 }
 .commonList .even td{
-	background: #EEE;
+  background: #EEE;
 }
 .commonList .title{
-	font-size: 14px;
+  font-size: 14px;
 }
 .commonList .title a{
-	display: block;
+  display: block;
 }
 
 .unRead {
-	font-weight: bold;
-	background: transparent url(/images/mail.png) top right no-repeat;
-	padding-right: 20px;
+  font-weight: bold;
+  background: transparent url(/images/mail.png) top right no-repeat;
+  padding-right: 20px;
 }
 
 .commonList .indent1{
-	text-indent: 20px;
+  text-indent: 20px;
 }
 
 /* faqList */
 .faqList {
-	clear: both;
-	border: 1px solid #bbb;
-	background: #FFF;
+  clear: both;
+  border: 1px solid #bbb;
+  background: #FFF;
 }
 
 .faqList th:first-child {
@@ -768,38 +770,38 @@ th.indent3{
 
 .faqList th,
 .faqList td {
-	padding: 5px;
-	margin: 5px;
+  padding: 5px;
+  margin: 5px;
 }
 
 .faqList th {
-	white-space: nowrap;
+  white-space: nowrap;
 }
 
 .faqList th.wrap {
-	white-space: normal;
+  white-space: normal;
 }
 
 .faqList td {
-	border: 1px solid #bbb;
+  border: 1px solid #bbb;
 }
 
 .faqList tr {
 }
 
 .faqList .title{
-	font-size: 14px;
+  font-size: 14px;
 }
 
 .faqList .title a{
-	display: block;
+  display: block;
 
 }
 .faqList .indent1{
-	text-indent: 20px;
+  text-indent: 20px;
 }
 .faqList hr {
-	float: left;
+  float: left;
 }
 
 
@@ -818,64 +820,64 @@ div#sub {
 ---------------------------------------- */
 div#footer,
 div#wrapperPop div#footer {
-	clear: both;
-	border-bottom: solid 5px #bbb;
-	padding: 10px 10px 5px 20px;
-	position: relative;
+  clear: both;
+  border-bottom: solid 5px #bbb;
+  padding: 10px 10px 5px 20px;
+  position: relative;
 }
 
-div#footer	{
-	width: 920px;
+div#footer  {
+  width: 920px;
 }
 
 div#wrapperPop div#footer {
-	width: 620px;
+  width: 620px;
 }
 
 #footer ul,
-#footerPop ul	{
-	margin-bottom: 10px;
+#footerPop ul {
+  margin-bottom: 10px;
 }
 
 #footer ul li,
-#footerPop ul li	{
-	display: inline;
-	margin-right: 0.5em;
+#footerPop ul li  {
+  display: inline;
+  margin-right: 0.5em;
 }
 
 div#footer div#tip{
-	position: fixed;
-	top: 6px;
-	left: 7;
-	width: 90px;
-	font-weight: bolder;
-	padding: 5px;
+  position: fixed;
+  top: 6px;
+  left: 7;
+  width: 90px;
+  font-weight: bolder;
+  padding: 5px;
 }
 
 .pageTop {
-	position: absolute;
-	top: 20px;
-	right: 10px;
+  position: absolute;
+  top: 20px;
+  right: 10px;
 }
 
 .pageTop a{
-	color: #fff;
-	text-decoration: none;
-	font-size: 10px;
-	padding-left: 10px;
-	background: transparent url(/images/link_t.gif) left center no-repeat;
+  color: #fff;
+  text-decoration: none;
+  font-size: 10px;
+  padding-left: 10px;
+  background: transparent url(/images/link_t.gif) left center no-repeat;
 }
 
 .toTop {
-	text-align: right;
-	margin-top: 20px;
+  text-align: right;
+  margin-top: 20px;
 }
 
 
 /* ----------------------- NOSTYLE Initialization */
 .nostyle div {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 .nostyle dl,
 .nostyle dt,
@@ -896,43 +898,43 @@ div#footer div#tip{
 .nostyle blockquote,
 .nostyle th,
 .nostyle td {
-	margin: inherit;
-	padding: inherit;
+  margin: inherit;
+  padding: inherit;
 }
 
 .nostyle tr:first-child th {
-	border: 1px solid #666;
+  border: 1px solid #666;
 }
 
 .nostyle th {
-	border: 1px solid #666;
-	background: #FFF;
-	color: #666;
-	width: inherit;
+  border: 1px solid #666;
+  background: #FFF;
+  color: #666;
+  width: inherit;
 }
 
 .nostyle td {
-	border: 1px solid #666;
-	font-style: normal;
+  border: 1px solid #666;
+  font-style: normal;
 }
 
 .nostyle hr,
 .nostyle legend {
-	display:inherit;
+  display:inherit;
 }
 
 .nostyle img {
-	border: none;
+  border: none;
 }
 
 .nostyle abbr,
 .nostyle acronym,
 .nostyle fieldset {
-	border: inherit;
+  border: inherit;
 }
 
 .nostyle li {
-	list-style-type: inherit;
+  list-style-type: inherit;
 }
 
 

@@ -18,10 +18,10 @@
 .t_logo{
 	text-align:center;
 	margin:0 auto;
-	margin-top:52px;
+	margin-top:15px;
 }
 .t_logo img{
-	width:60%;
+	width:80%;
 	height:auto;
 }
 
@@ -33,7 +33,7 @@ input.t_textinput{
 	width: 90%;
 	height:auto;
 	margin-top:75px;
-	font-size:160%;
+	font-size:100%;
 	padding-left:15px;
 	padding-top:15px;
 	padding-bottom:15px;

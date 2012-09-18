@@ -64,8 +64,8 @@ Rails::Initializer.run do |config|
   config.gem 'mislav-will_paginate', :lib => 'will_paginate', :version => '~> 2.3'
 
   # set constant values
-  # REGEXP_ZENKAKU = /^[^ -~?-ﾟ]*$/       # zenkaku
-  # REGEXP_HANKAKU = /^[ -~?-ﾟ]*$/        # hankaku
+  # REGEXP_ZENKAKU = /^[^ -~｡-ﾟ]*$/       # zenkaku
+  # REGEXP_HANKAKU = /^[ -~｡-ﾟ]*$/        # hankaku
   # REGEXP_EMAIL   = /^[w.-]+@(?:[w-]+.)+[w-]+$/   # mail
   # REGEXP_ZIP     = /^d{3}-?d{4}$/     # zip
   # REGEXP_TEL     = /^d+-?d+-?d+$/    # tel
@@ -77,6 +77,6 @@ Rails::Initializer.run do |config|
 
   DISPLAY_TYPE_SIMPLE = 'simple'
 
-  APP_COMPANY = 'しおじりごみサーチβ'
+  APP_COMPANY = 'しおじりごみサーチ Web β'
   APP_TITLE   = 'しおじりごみサーチ'
 end
