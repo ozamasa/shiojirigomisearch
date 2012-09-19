@@ -57,12 +57,20 @@ div#wrapperPop div#header {
 #header h1 {
   margin: 0;
   padding: 0;
-  background: url(/images/top_logo.jpg) no-repeat;
+  background: url(/images/top_logo.png) no-repeat;
   -moz-background-size:contain;
   background-size:contain;
   float: left;
   width: 324px;
   height: 80px;
+  text-indent:-100000em;
+}
+
+#login h1 {
+  background: url(/images/top_logo.png) left no-repeat;
+  -moz-background-size:contain; background-size:contain;
+  width: 100%;
+  height: 150px;
   text-indent:-100000em;
 }
 

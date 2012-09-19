@@ -67,6 +67,7 @@
 <td>
   <%= h @category.detail_url %>
   <%= f.hidden_field :detail_url %>
+  <br><%= image_tag IMAGE_SERVER + @category.detail_url unless @category.detail_url.blank? %>
 </td>
 </tr>
 <tr>
@@ -81,6 +82,7 @@
 <td>
   <%= h @category.throw_url %>
   <%= f.hidden_field :throw_url %>
+  <br><%= image_tag IMAGE_SERVER + @category.throw_url unless @category.throw_url.blank? %>
 </td>
 </tr>
 <%= f.hidden_field :lock_version %>
