@@ -59,9 +59,9 @@
 <% } -%>
 
 <% @collect_dates.each do |collect_date| -%>
-<%= "<tr>"  if collect_date.collect_date.to_date.cwday == 7 %>
-    <td valign='top' width='80'><%=link_to (hdate collect_date.collect_date, :format => "%d"), collect_date %><br><%=hname collect_date.category_group %></td>
-<%= "</tr>" if collect_date.collect_date.to_date.cwday == 6 %>
+<%= "<tr>"  if collect_date.collect_date.to_date.cwday == 7 -%>
+    <td valign='top' width='80'><%=link_to (hdate collect_date.collect_date, :format => "%d"), collect_date %><%="<font color='#703956'><b> [今日] </b></font>" if collect_date.collect_date.strftime("%Y%m%d") == Date.today.strftime("%Y%m%d")%><br><%=hname collect_date.category_group %></td>
+<%= "</tr>" if collect_date.collect_date.to_date.cwday == 6 -%>
 <% end -%>
 <% end -%>
 </tbody>
