@@ -120,6 +120,7 @@ input.h_btn{
 }
 .d_time_area{
 	width: 88%;
+	height:100%;
 	text-align: center;
 	margin:0 auto;
 	margin-top:20px;
@@ -234,6 +235,7 @@ dd.d_btn_openarea p{
 }
 dd.d_btn_openarea div{
 	width:80%;
+	height:auto;
 }
 dd.d_btn_openarea img{
 	width:100%;
@@ -259,5 +261,5 @@ dd.d_btn_openarea img{
 	margin-top:55px;
 }
 .df_nb{
-	font-size:140%;
+	font-size:120%;
 }

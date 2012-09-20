@@ -18,21 +18,19 @@
 .t_logo{
 	text-align:center;
 	margin:0 auto;
-	margin-top:15px;
 }
 .t_logo img{
-	width:80%;
+	width:70%;
 	height:auto;
 }
 
 .t_textinput{
 	width: 100%;
-	margin-top:75px;
+	margin-top:45px;
 }
 input.t_textinput{
 	width: 90%;
 	height:auto;
-	margin-top:75px;
 	font-size:100%;
 	padding-left:15px;
 	padding-top:15px;
@@ -45,7 +43,7 @@ input.t_textinput{
 .t_btn{
 	width: 80%;
 	height: 50px;
-	margin-top:85px;
+	margin-top:35px;
 	font-size:24px;
 	-webkit-appearance: none; /* Safari, Google Chrome */
 	-moz-appearance: none; /* Firefox */

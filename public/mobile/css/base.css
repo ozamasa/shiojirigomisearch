@@ -25,10 +25,11 @@ body{
 	margin:0 auto;
 }
 #wrapper {
-	width:100% ;
 	clear:both;
-	overflow: scroll;
-	overflow-x:hidden;
+	position:relative;
+	z-index:1;
+	width:100% ;
+	overflow:hidden;
 	}
 /*
 ======= 文字 =======
