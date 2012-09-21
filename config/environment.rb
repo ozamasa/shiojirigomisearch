@@ -71,7 +71,7 @@ Rails::Initializer.run do |config|
   # REGEXP_TEL     = /^d+-?d+-?d+$/    # tel
   # REGEXP_PASSWORD= /^(?=.{8,})(?=.*[a-zA-Z]+)(?=.*[d]+)[0-9A-Za-z]+$/  # password
 
-  IMAGE_SERVER = 'http://mobile3.portalcms.me/'
+  IMAGE_SERVER = 'http://mobile3.portalcms.me/gomi_images/'
 
   PAGINATE_PER_PAGE = 20
 
