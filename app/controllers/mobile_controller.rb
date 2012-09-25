@@ -82,7 +82,9 @@ class MobileController < ApplicationController
       rescue => e
       end
 
-      count = garbage.count + 1
+      count = garbage.count
+      count = 0 if garbage.count.blank?
+      count = count + 1
       garbage.update_attribute(:count, count)
 
       json = data.to_json
