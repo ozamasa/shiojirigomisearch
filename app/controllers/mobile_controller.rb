@@ -43,8 +43,6 @@ class MobileController < ApplicationController
   def garbage
     begin
       garbage = Garbage.find(params[:id])
-      count = garbage.count + 1
-      garbage.update_attribute(:count, count)
 
       data = GarbageData.new
       data.id = garbage.id
@@ -83,6 +81,9 @@ class MobileController < ApplicationController
 # current_timestamp
       rescue => e
       end
+
+      count = garbage.count + 1
+      garbage.update_attribute(:count, count)
 
       json = data.to_json
     rescue => e
