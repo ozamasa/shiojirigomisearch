@@ -8,11 +8,13 @@ class MobileController < ApplicationController
 #      @app_search.query = "garbages.name like ? or garbages.ruby like ? or garbages.image_url like ? or categories.name like ? or garbages.note like ? or garbages.gabage_station like ? or garbages.gabage_center like ? or garbages.keyword1 like ? or garbages.keyword2 like ? or garbages.keyword3 like ? or garbages.keyword4 like ? or garbages.keyword5 like ? "
 
       alls = Garbage.all(
-              :limit => 10,
+              :limit => 20,
               :include => [:category],
               :conditions => @app_search.conditions,
-              :order => "garbages.ruby"
+              :order => "garbages.count desc, garbages.image_url is null, garbages.image_url"
              )
+
+      SearchLog.create(:keyword => params[:keyword])
 
       datas = Array.new
       alls.each{|garbage|
@@ -41,6 +43,8 @@ class MobileController < ApplicationController
   def garbage
     begin
       garbage = Garbage.find(params[:id])
+
+      garbage.update_attribute(:count, garbage.count+1)
 
       data = GarbageData.new
       data.id = garbage.id
