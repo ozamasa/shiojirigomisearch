@@ -43,8 +43,8 @@ class MobileController < ApplicationController
   def garbage
     begin
       garbage = Garbage.find(params[:id])
-
-      garbage.update_attribute(:count, garbage.count+1)
+      count = garbage.count + 1
+      garbage.update_attribute(:count, count)
 
       data = GarbageData.new
       data.id = garbage.id
