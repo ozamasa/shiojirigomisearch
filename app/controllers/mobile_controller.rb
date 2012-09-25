@@ -4,9 +4,11 @@ class MobileController < ApplicationController
   def search
     begin
       @app_search = ApplicationSearch.new(params)
-      @app_search.query = "garbages.name like ? or garbages.ruby like ? or garbages.image_url like ? or categories.name like ? or garbages.note like ? or garbages.gabage_station like ? or garbages.gabage_center like ? or garbages.keyword1 like ? or garbages.keyword2 like ? or garbages.keyword3 like ? or garbages.keyword4 like ? or garbages.keyword5 like ? "
+      @app_search.query = "garbages.name like ? or garbages.ruby like ? or categories.name like ? or garbages.note like ? or garbages.keyword1 like ? or garbages.keyword2 like ? or garbages.keyword3 like ? or garbages.keyword4 like ? or garbages.keyword5 like ? "
+#      @app_search.query = "garbages.name like ? or garbages.ruby like ? or garbages.image_url like ? or categories.name like ? or garbages.note like ? or garbages.gabage_station like ? or garbages.gabage_center like ? or garbages.keyword1 like ? or garbages.keyword2 like ? or garbages.keyword3 like ? or garbages.keyword4 like ? or garbages.keyword5 like ? "
 
       alls = Garbage.all(
+              :limit => 10,
               :include => [:category],
               :conditions => @app_search.conditions,
               :order => "garbages.ruby"
@@ -98,7 +100,7 @@ class MobileController < ApplicationController
     begin
 
       alls = Area.all(
-              :order => :name
+              :order => :id
              )
 
       datas = Array.new
@@ -130,7 +132,7 @@ PRODID:-//shiojiri.heroku.com
 VERSION:2.0
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:しおじりごみ収集日カレンダー #{area.name}
+X-WR-CALNAME:塩尻ごみ収集日カレンダー #{area.name}
 X-WR-TIMEZONE:Asia/Tokyo
 BEGIN:VTIMEZONE
 TZID:Asia/Tokyo
