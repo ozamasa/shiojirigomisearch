@@ -44,8 +44,8 @@ class ApplicationSearch # < ActiveRecord::Base
   end
   def sort=(val)
     @sort = val  if val
-    @orderby = "#{@sort.to_s} is null #{@order.to_s}, #{@sort.to_s} #{@order.to_s}"
-#    @orderby = @sort.to_s + ' ' + @order.to_s
+#    @orderby = "#{@sort.to_s} is null #{@order.to_s}, #{@sort.to_s} #{@order.to_s}"
+    @orderby = @sort.to_s + ' ' + @order.to_s
   end
 
   #attr_accessor :order
@@ -54,8 +54,8 @@ class ApplicationSearch # < ActiveRecord::Base
   end
   def order=(val)
     @order = val if val
-    @orderby = "#{@sort.to_s} is null #{@order.to_s}, #{@sort.to_s} #{@order.to_s}"
-#    @orderby = @sort.to_s + ' ' + @order.to_s
+#    @orderby = "#{@sort.to_s} is null #{@order.to_s}, #{@sort.to_s} #{@order.to_s}"
+    @orderby = @sort.to_s + ' ' + @order.to_s
   end
 
   #attr_accessor :default_sort

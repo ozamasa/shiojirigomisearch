@@ -11,7 +11,7 @@ class MobileController < ApplicationController
               :limit => 20,
               :include => [:category],
               :conditions => @app_search.conditions,
-              :order => "coalesce(garbages.count,0) desc, (garbages.image_url is null), garbages.image_url"
+              :order => "coalesce(garbages.count,0) desc, garbages.image_url"
              )
 
       SearchLog.create(:keyword => params[:keyword])
