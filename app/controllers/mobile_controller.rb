@@ -177,7 +177,8 @@ END:VCALENDAR
 EOF
 
       send_data(output, :type => "text/calendar; charset=utf-8;")
-    rescue
+    rescue => e
+      logger.info e
     end
   end
 
